@@ -18,7 +18,7 @@ scroll-behavior:smooth;
 
 body{
 background:#05070d;
-color:#fff;
+color:white;
 }
 
 nav{
@@ -26,50 +26,93 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:20px 8%;
 background:rgba(0,0,0,.75);
-backdrop-filter:blur(12px);
+backdrop-filter:blur(15px);
 z-index:1000;
 }
 
-nav img{
-width:70px;
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo img{
+width:55px;
+}
+
+.logo h2{
+font-size:28px;
+letter-spacing:2px;
 }
 
 nav ul{
 display:flex;
-gap:30px;
 list-style:none;
+gap:35px;
 }
 
 nav ul li a{
-color:#fff;
+color:white;
 text-decoration:none;
-font-weight:bold;
+font-size:17px;
 transition:.3s;
 }
 
 nav ul li a:hover{
-color:#3ea6ff;
+color:#29b6ff;
 }
 
 .hero{
-min-height:100vh;
+height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:120px 10%;
+padding:20px;
+background:
+radial-gradient(circle,#0b1838,#05070d);
 }
 
 .hero img{
-width:170px;
-margin-bottom:
-  </style>
+width:220px;
+margin-bottom:30px;
+}
+
+.hero h1{
+font-size:70px;
+letter-spacing:3px;
+}
+
+.hero p{
+font-size:24px;
+margin-top:20px;
+color:#9fcfff;
+}
+
+.btn{
+display:inline-block;
+margin-top:35px;
+padding:15px 40px;
+background:#2196f3;
+color:white;
+text-decoration:none;
+border-radius:40px;
+font-size:18px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#42a5f5;
+transform:scale(1.05);
+}
+
+</style>
 </head>
 
 <body>
@@ -77,67 +120,79 @@ margin-bottom:
 <nav>
 
 <div class="logo">
-<img src="logo.png" alt="ZEXVON">
+<img src="logo.png">
+<h2>ZEXVON</h2>
 </div>
 
 <ul>
-<li><a href="#home">Home</a></li>
+<li><a href="#">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#products">Products</a></li>
+<li><a href="#vision">Vision</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 
 </nav>
 
-<section class="hero" id="home">
+<section class="hero">
 
-<img src="logo.png" alt="Logo">
+<img src="logo.png">
 
 <h1>ZEXVON</h1>
 
-<p>
+<p>Turning Ideas Into Reality</p>
 
-Turning Ideas Into Reality
+<a href="#about" class="btn">Explore</a>
+
+</section>
+<!-- ABOUT -->
+
+<section id="about" style="padding:100px 8%;">
+
+<h2 style="font-size:42px;text-align:center;color:#29b6ff;">
+About ZEXVON
+</h2>
+
+<p style="max-width:900px;margin:30px auto;text-align:center;font-size:20px;line-height:1.8;color:#d0d0d0;">
+
+ZEXVON is a future-focused technology company dedicated to transforming bold ideas into reality. We create premium innovations that combine intelligent technology, elegant design, and meaningful experiences for the future.
 
 </p>
 
-<a href="#products" class="btn">
-Explore
-</a>
-
 </section>
 
-<section id="about" class="about">
 
-<div class="container">
+<!-- PRODUCTS -->
 
-<h2>About ZEXVON</h2>
+<section id="products" style="padding:100px 8%;background:#090d18;">
 
-<p>
+<h2 style="font-size:42px;text-align:center;color:#29b6ff;">
+Products
+</h2>
 
-ZEXVON is a future-focused technology company creating premium innovations that transform bold ideas into reality.
+<div style="display:flex;justify-content:center;flex-wrap:wrap;margin-top:60px;">
 
-We believe great products begin with a simple vision and are built with outstanding design and intelligent technology.
+<div style="background:#111827;border-radius:20px;padding:30px;width:330px;text-align:center;box-shadow:0 0 30px rgba(0,150,255,.25);">
+
+<img src="ring.png"
+style="width:220px;border-radius:15px;">
+
+<h3 style="margin-top:25px;font-size:30px;">
+Aura Ring
+</h3>
+
+<p style="margin-top:15px;color:#bbbbbb;line-height:1.7;">
+
+Our first smart wearable is currently under development.
 
 </p>
 
-</div>
-
-</section>
-
-<section id="products" class="products">
-
-<div class="container">
-
-<h2>Products</h2>
-
-<div class="product-card">
-
-<img src="ring.png" alt="Aura Ring">
-
-<h3>Aura Ring</h3>
-
-<div class="coming">
+<div style="margin-top:25px;
+display:inline-block;
+padding:12px 30px;
+border-radius:30px;
+background:#2196f3;
+font-weight:bold;">
 
 COMING SOON
 
@@ -148,115 +203,104 @@ COMING SOON
 </div>
 
 </section>
-<section class="products" id="products">
+<!-- VISION -->
 
-<div class="container">
+<section id="vision" style="padding:100px 8%;">
 
-<h2>Products</h2>
+<h2 style="font-size:42px;text-align:center;color:#29b6ff;">
+Our Vision
+</h2>
 
-<div class="product-card">
+<p style="max-width:900px;margin:35px auto;text-align:center;font-size:20px;line-height:1.8;color:#d0d0d0;">
 
-<img src="ring.png" alt="Aura Ring">
-
-<h3>Aura Ring</h3>
-
-<p style="margin-top:20px;color:#cfcfcf;">
-
-Our first wearable innovation is currently under development.
+At ZEXVON, we believe every great innovation begins with one bold idea. Our mission is to build futuristic technology that improves everyday life while maintaining premium design, intelligence, and simplicity.
 
 </p>
-
-<div class="coming">
-
-COMING SOON
-
-</div>
-
-</div>
-
-</div>
 
 </section>
 
-<section class="vision">
 
-<div class="container">
+<!-- CONTACT -->
 
-<h2>Our Vision</h2>
+<section id="contact" style="padding:100px 8%;background:#090d18;">
 
-<p>
+<h2 style="font-size:42px;text-align:center;color:#29b6ff;">
+Contact
+</h2>
 
-We believe every great innovation starts with one bold idea.
+<p style="text-align:center;font-size:20px;margin-top:25px;color:#d0d0d0;">
 
-ZEXVON is building the next generation of intelligent technology with a focus on premium design, simplicity and innovation.
-
-</p>
-
-</div>
-
-</section>
-<section class="contact" id="contact">
-
-<div class="container">
-
-<h2>Contact</h2>
-
-<p>
-
-Stay connected with ZEXVON.
-
-More exciting innovations are coming soon.
+📧 Email: contact@zexvon.com
 
 </p>
 
-<br>
+<p style="text-align:center;font-size:20px;margin-top:15px;color:#d0d0d0;">
 
-<p>Email: contact@zexvon.com</p>
+🌐 www.zexvon.com
 
-<p>Instagram: @zexvon</p>
-
-</div>
+</p>
 
 </section>
 
-<footer>
 
-<p>© 2026 ZEXVON. All Rights Reserved.</p>
+<!-- FOOTER
+  <style>
 
-<p style="margin-top:10px;">
-Turning Ideas Into Reality
-</p>
+@media (max-width:768px){
 
-</footer>
+nav{
+flex-direction:column;
+padding:15px;
+}
 
-<script>
+nav ul{
+flex-direction:column;
+gap:15px;
+margin-top:15px;
+}
 
-const observer = new IntersectionObserver((entries)=>{
+.hero h1{
+font-size:48px;
+}
 
-entries.forEach(entry=>{
+.hero p{
+font-size:18px;
+}
 
-if(entry.isIntersecting){
+.hero img{
+width:160px;
+}
 
-entry.target.style.opacity="1";
-entry.target.style.transform="translateY(0px)";
+.btn{
+padding:12px 28px;
+font-size:16px;
+}
 
 }
 
-});
+html{
+scroll-behavior:smooth;
+}
 
-});
+section{
+animation:fadeUp 1s ease;
+}
 
-document.querySelectorAll("section").forEach(section=>{
+@keyframes fadeUp{
 
-section.style.opacity="0";
-section.style.transform="translateY(40px)";
-section.style.transition="all 0.8s ease";
+from{
+opacity:0;
+transform:translateY(40px);
+}
 
-observer.observe(section);
+to{
+opacity:1;
+transform:translateY(0);
+}
 
-});
+}
 
-</script>
+</style>
 
 </body>
 </html>
