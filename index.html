@@ -64,6 +64,19 @@ font-size:17px;
 transition:.3s;
 }
 
+nav ul li a::after{
+content:'';
+display:block;
+width:0;
+height:2px;
+background:#29b6ff;
+transition:.3s;
+margin-top:5px;
+}
+
+nav ul li a:hover::after{
+width:100%;
+}
 nav ul li a:hover{
 color:#29b6ff;
 }
