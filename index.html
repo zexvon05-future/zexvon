@@ -20,7 +20,27 @@ body{
 background:#05070d;
 color:white;
 }
+#hero{
+    min-height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:radial-gradient(circle at center,#0b3d91 0%,#050814 40%,#000000 100%);
+}
 
+#hero h1{
+    text-shadow:0 0 30px #2ea3ff;
+}
+
+#hero a{
+    transition:0.3s;
+}
+
+#hero a:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 30px #2ea3ff;
+}
 nav{
 position:fixed;
 top:0;
