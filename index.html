@@ -512,7 +512,28 @@ transform:translateY(0);
 .hero p{
   animation:fadeUp 1.4s ease;
 }
+#topBtn{
+display:none;
+position:fixed;
+bottom:25px;
+right:20px;
+z-index:9999;
+background:#2ea3ff;
+color:white;
+border:none;
+width:55px;
+height:55px;
+border-radius:50%;
+font-size:24px;
+cursor:pointer;
+box-shadow:0 0 20px #2ea3ff;
+transition:0.3s;
+}
 
+#topBtn:hover{
+transform:scale(1.1);
+box-shadow:0 0 35px #2ea3ff;
+}
 .btn{
   animation:fadeUp 1.6s ease;
 }
