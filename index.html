@@ -77,6 +77,14 @@ background-repeat:no-repeat;
 .btn-glow{
   animation: glow 2s infinite;
 }
+    .product-card{
+    transition:0.3s ease;
+}
+
+.product-card:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 0 35px rgba(46,163,255,0.6);
+}
 nav{
 position:fixed;
 top:0;
@@ -316,7 +324,7 @@ style="width:140px;margin-bottom:25px;filter:drop-shadow(0 0 25px #2ea3ff);">
 
   <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:30px;">
 
-    <div style="width:320px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:20px;">
+    <div class="product-card" style="width:320px;;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:20px;">
       <img src="ring.png" style="width:100%;border-radius:15px;">
       <h3 style="color:white;margin-top:20px;">Aura Ring</h3>
       <p style="color:#b8c4d6;">
