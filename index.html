@@ -561,6 +561,26 @@ window.onload = function(){
     document.getElementById("loader").style.display = "none";
 }
 </script>
+    <button id="topBtn">↑</button>
+
+<script>
+let topBtn=document.getElementById("topBtn");
+
+window.addEventListener("scroll",function(){
+    if(window.scrollY>300){
+        topBtn.style.display="block";
+    }else{
+        topBtn.style.display="none";
+    }
+});
+
+topBtn.onclick=function(){
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+};
+</script>
 </body>
     <div id="loader">
     <h1>ZEXVON</h1>
