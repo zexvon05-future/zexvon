@@ -227,6 +227,20 @@ transform:scale(1.05);
     color:#29b6ff;
     margin-bottom:10px;
 }
+    html{
+    scroll-behavior:smooth;
+}
+
+section{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all .8s ease;
+}
+
+section.show{
+    opacity:1;
+    transform:translateY(0);
+}
 </style>
 </head>
 
