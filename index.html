@@ -630,6 +630,55 @@ footer{
     position: relative;
     z-index: 1;
 }
+      .menu-btn{
+  display:none;
+  background:none;
+  border:none;
+  color:white;
+  font-size:32px;
+  cursor:pointer;
+}
+
+@media(max-width:768px){
+
+  nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  nav ul{
+    display:none;
+    position:absolute;
+    top:75px;
+    right:15px;
+    flex-direction:column;
+    background:#080d18;
+    padding:20px;
+    border-radius:15px;
+    gap:20px;
+    z-index:999;
+  }
+
+  nav ul.show{
+    display:flex;
+  }
+
+  nav ul li{
+    list-style:none;
+  }
+
+  nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+  }
+}
 </style>
 <footer style="text-align:center;padding:30px 20px;background:#05070d;border-top:1px solid #1a2b45;margin-top:80px;">
   <h3 style="color:#2196f3;">ZEXVON</h3>
