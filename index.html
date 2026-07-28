@@ -440,4 +440,6724 @@ canvas {
   flex-direction: column;
   gap: 24px;
   background: #020407
-  
+  .section-heading {
+  position: relative;
+  max-width: 760px;
+  margin-bottom: 78px;
+}
+
+.section-number {
+  display: block;
+  margin-bottom: 24px;
+  color: rgba(22, 131, 255, 0.72);
+  font-family: var(--font-display);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  max-width: 720px;
+  font-family: var(--font-display);
+  font-size: clamp(38px, 5.5vw, 70px);
+  line-height: 1.02;
+  font-weight: 300;
+  letter-spacing: -0.055em;
+  color: rgba(245, 248, 252, 0.94);
+}
+
+.section-heading h2 span {
+  color: rgba(255, 255, 255, 0.46);
+}
+
+.section-heading p {
+  width: min(520px, 100%);
+  margin-top: 25px;
+  color: rgba(184, 193, 205, 0.58);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  padding: 150px 0;
+}
+
+.section-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+  opacity: 0.28;
+}
+
+.section-glow-left {
+  left: -350px;
+  top: 35%;
+  background: rgba(22, 131, 255, 0.12);
+}
+
+.section-glow-right {
+  right: -350px;
+  top: 30%;
+  background: rgba(22, 131, 255, 0.1);
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 100px;
+  align-items: start;
+}
+
+.about-intro {
+  position: sticky;
+  top: 140px;
+}
+
+.about-line {
+  width: 45px;
+  height: 1px;
+  margin-bottom: 28px;
+  background: var(--blue);
+  box-shadow: 0 0 14px rgba(22, 131, 255, 0.65);
+}
+
+.large-copy {
+  max-width: 390px;
+  color: rgba(245, 248, 252, 0.78);
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.4vw, 32px);
+  line-height: 1.35;
+  font-weight: 300;
+  letter-spacing: -0.035em;
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.about-card {
+  position: relative;
+  min-height: 310px;
+  padding: 30px 25px;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.012)),
+    rgba(5, 8, 13, 0.52);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 4px;
+  transition:
+    transform 0.65s var(--ease),
+    border-color 0.5s ease,
+    background 0.5s ease,
+    box-shadow 0.65s ease;
+}
+
+.about-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: linear-gradient(90deg, transparent, var(--blue), transparent);
+  box-shadow: 0 0 18px rgba(22, 131, 255, 0.5);
+  transition: transform 0.7s var(--ease);
+}
+
+.about-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(22, 131, 255, 0.09), transparent 52%);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+
+.about-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(22, 131, 255, 0.28);
+  background:
+    linear-gradient(145deg, rgba(22, 131, 255, 0.07), rgba(255, 255, 255, 0.012)),
+    rgba(5, 8, 13, 0.65);
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.35),
+    0 0 45px rgba(22, 131, 255, 0.055);
+}
+
+.about-card:hover::before {
+  transform: scaleX(1);
+}
+
+.about-card:hover::after {
+  opacity: 1;
+}
+
+.card-index {
+  position: relative;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.24);
+  font-family: var(--font-display);
+  font-size: 8px;
+  letter-spacing: 0.18em;
+}
+
+.card-icon {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  margin: 68px 0 38px;
+}
+
+.card-icon span:first-child {
+  position: absolute;
+  inset: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transition:
+    border-color 0.5s ease,
+    transform 0.7s var(--ease),
+    box-shadow 0.5s ease;
+}
+
+.card-icon span:last-child {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  left: 18px;
+  top: 18px;
+  border: 1px solid rgba(22, 131, 255, 0.7);
+  border-radius: 50%;
+  box-shadow: 0 0 14px rgba(22, 131, 255, 0.18);
+  transition:
+    transform 0.7s var(--ease),
+    box-shadow 0.5s ease;
+}
+
+.about-card:hover .card-icon span:first-child {
+  transform: rotate(90deg);
+  border-color: rgba(22, 131, 255, 0.48);
+  box-shadow: 0 0 22px rgba(22, 131, 255, 0.08);
+}
+
+.about-card:hover .card-icon span:last-child {
+  transform: scale(1.2);
+  box-shadow: 0 0 24px rgba(22, 131, 255, 0.45);
+}
+
+.card-icon-orbit span:first-child {
+  border-radius: 50%;
+  transform: rotate(25deg) scaleX(0.62);
+}
+
+.about-card:hover .card-icon-orbit span:first-child {
+  transform: rotate(115deg) scaleX(0.62);
+}
+
+.card-icon-core span:first-child {
+  border-radius: 6px;
+  transform: rotate(45deg) scale(0.68);
+}
+
+.about-card:hover .card-icon-core span:first-child {
+  transform: rotate(135deg) scale(0.68);
+}
+
+.about-card h3 {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 13px;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.about-card p {
+  position: relative;
+  z-index: 2;
+  color: rgba(184, 193, 205, 0.46);
+  font-size: 10px;
+  line-height: 1.75;
+}
+
+.products {
+  display: flex;
+  align-items: center;
+  padding: 150px 0;
+  background:
+    radial-gradient(circle at 50% 40%, rgba(22, 131, 255, 0.035), transparent 32%);
+}
+
+.products-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.products-heading p {
+  margin-bottom: 4px;
+}
+
+.product-carousel-wrap {
+  position: relative;
+}
+
+.product-carousel {
+  display: flex;
+  gap: 18px;
+  width: calc(100vw - ((100vw - min(1240px, calc(100% - 80px))) / 2));
+  overflow-x: auto;
+  padding: 8px 0 28px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+  cursor: grab;
+}
+
+.product-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.product-carousel.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+}
+
+.product-card {
+  position: relative;
+  flex: 0 0 min(760px, 78vw);
+  min-height: 520px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  overflow: hidden;
+  scroll-snap-align: start;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.012)),
+    rgba(5, 8, 13, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  transition:
+    border-color 0.6s ease,
+    transform 0.7s var(--ease),
+    box-shadow 0.7s ease;
+}
+
+.product-card:hover {
+  border-color: rgba(22, 131, 255, 0.34);
+  transform: translateY(-5px);
+  box-shadow:
+    0 35px 100px rgba(0, 0, 0, 0.5),
+    0 0 60px rgba(22, 131, 255, 0.06);
+}
+
+.product-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(circle at 30% 35%, rgba(22, 131, 255, 0.12), transparent 35%);
+  transition: opacity 0.7s ease;
+}
+
+.product-card:hover::after {
+  opacity: 1;
+}
+
+.product-visual {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(22, 131, 255, 0.1), transparent 30%),
+    rgba(1, 3, 6, 0.55);
+  border-right: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.product-visual::before {
+  content: "";
+  position: absolute;
+  width: 75%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(255, 255, 255, 0.045);
+  border-radius: 50%;
+  box-shadow:
+    0 0 70px rgba(22, 131, 255, 0.04),
+    inset 0 0 60px rgba(22, 131, 255, 0.025);
+}
+
+.product-visual::after {
+  content: "";
+  position: absolute;
+  width: 46%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(22, 131, 255, 0.09);
+  border-radius: 50%;
+  animation: productOrbit 12s linear infinite;
+}
+
+@keyframes productOrbit {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.035);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.aura-environment {
+  position: absolute;
+  width: 72%;
+  height: 72%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(22, 131, 255, 0.08), transparent 60%);
+  filter: blur(18px);
+  animation: auraEnvironment 5s ease-in-out infinite;
+}
+
+@keyframes auraEnvironment {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+.aura-ring-model {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  transform: rotate(-20deg) rotateX(58deg);
+  transform-style: preserve-3d;
+  z-index: 3;
+  transition:
+    transform 1s var(--ease),
+    filter 0.8s ease;
+}
+
+.product-aura:hover .aura-ring-model {
+  transform: rotate(-8deg) rotateX(58deg) scale(1.06);
+  filter: drop-shadow(0 0 24px rgba(22, 131, 255, 0.28));
+}
+
+.ring-outer {
+  position: absolute;
+  inset: 0;
+  border: 13px solid rgba(170, 182, 196, 0.72);
+  border-radius: 50%;
+  box-shadow:
+    inset 4px 5px 8px rgba(255, 255, 255, 0.28),
+    inset -7px -8px 12px rgba(0, 0, 0, 0.5),
+    0 12px 20px rgba(0, 0, 0, 0.45);
+}
+
+.ring-inner {
+  position: absolute;
+  inset: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 50%;
+  background: rgba(3, 5, 8, 0.78);
+  box-shadow:
+    inset 0 0 20px rgba(0, 0, 0, 0.7),
+    0 0 12px rgba(22, 131, 255, 0.08);
+}
+
+.ring-highlight {
+  position: absolute;
+  top: 8px;
+  left: 28px;
+  width: 72px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.42);
+  filter: blur(6px);
+  transform: rotate(-16deg);
+  opacity: 0.45;
+}
+
+.ring-shadow {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  bottom: -18px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.65);
+  filter: blur(16px);
+  transform: rotateX(65deg);
+}
+
+.product-scanline {
+  position: absolute;
+  width: 90%;
+  height: 1px;
+  top: 20%;
+  left: 5%;
+  background: linear-gradient(90deg, transparent, rgba(22, 131, 255, 0.32), transparent);
+  box-shadow: 0 0 12px rgba(22, 131, 255, 0.16);
+  animation: scanMove 4.5s ease-in-out infinite;
+  opacity: 0.5;
+}
+
+@keyframes scanMove {
+  0%,
+  100% {
+    top: 20%;
+    opacity: 0;
+  }
+  35% {
+    opacity: 0.5;
+  }
+  65% {
+    opacity: 0.5;
+  }
+  100% {
+    top: 80%;
+    opacity: 0;
+  }
+}
+
+.product-orbit-dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--blue-bright);
+  box-shadow: 0 0 12px rgba(22, 131, 255, 0.95);
+  z-index: 5;
+}
+
+.product-orbit-dot-one {
+  animation: dotOrbitOne 8s linear infinite;
+}
+
+.product-orbit-dot-two {
+  animation: dotOrbitTwo 11s linear infinite reverse;
+}
+
+@keyframes dotOrbitOne {
+  0% {
+    left: 18%;
+    top: 50%;
+  }
+  25% {
+    left: 50%;
+    top: 20%;
+  }
+  50% {
+    left: 82%;
+    top: 50%;
+  }
+  75% {
+    left: 50%;
+    top: 80%;
+  }
+  100% {
+    left: 18%;
+    top: 50%;
+  }
+}
+
+@keyframes dotOrbitTwo {
+  0% {
+    left: 25%;
+    top: 25%;
+  }
+  25% {
+    left: 75%;
+    top: 25%;
+  }
+  50% {
+    left: 75%;
+    top: 75%;
+  }
+  75% {
+    left: 25%;
+    top: 75%;
+  }
+  100% {
+    left: 25%;
+    top: 25%;
+  }
+}
+
+.product-info {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 42px;
+}
+
+.product-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: auto;
+}
+
+.product-category,
+.product-state {
+  color: rgba(255, 255, 255, 0.3);
+  font-family: var(--font-display);
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.product-state {
+  color: rgba(22, 131, 255, 0.72);
+}
+
+.product-info h3 {
+  margin-bottom: 14px;
+  color: rgba(255, 255, 255, 0.94);
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 300;
+  letter-spacing: -0.045em;
+}
+
+.product-info > p {
+  max-width: 280px;
+  margin-bottom: 30px;
+  color: rgba(184, 193, 205, 0.5);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.product-link {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.64);
+  font-family: var(--font-display);
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition:
+    color 0.35s ease,
+    gap 0.5s var(--ease),
+    text-shadow 0.35s ease;
+}
+
+.product-link span {
+  color: var(--blue);
+  font-size: 13px;
+  transition: transform 0.5s var(--ease);
+}
+
+.product-link:hover {
+  color: #ffffff;
+  gap: 16px;
+  text-shadow: 0 0 18px rgba(22, 131, 255, 0.25);
+}
+
+.product-link:hover span {
+  transform: translate(3px, -3px);
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+  margin-top: 22px;
+}
+
+.carousel-button {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.025);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  transition:
+    color 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.35s var(--ease);
+}
+
+.carousel-button:hover {
+  color: #ffffff;
+  border-color: rgba(22, 131, 255, 0.42);
+  background: rgba(22, 131, 255, 0.08);
+  box-shadow: 0 0 25px rgba(22, 131, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.carousel-progress {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.carousel-progress-current,
+.carousel-progress-total {
+  color: rgba(255, 255, 255, 0.42);
+  font-family: var(--font-display);
+  font-size: 8px;
+  letter-spacing: 0.14em;
+}
+
+.carousel-progress-total {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.carousel-progress-line {
+  position: relative;
+  width:
+.contact {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding: 150px 0 110px;
+  background:
+    radial-gradient(circle at 80% 50%, rgba(22, 131, 255, 0.065), transparent 32%),
+    rgba(2, 4, 8, 0.9);
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 110px;
+  align-items: center;
+}
+
+.contact-left h2 {
+  max-width: 600px;
+  font-family: var(--font-display);
+  font-size: clamp(42px, 6vw, 78px);
+  line-height: 0.98;
+  font-weight: 300;
+  letter-spacing: -0.06em;
+}
+
+.contact-left h2 span {
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.contact-description {
+  max-width: 410px;
+  margin-top: 28px;
+  color: rgba(184, 193, 205, 0.52);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.contact-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 52px;
+}
+
+.contact-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-meta-line {
+  width: 28px;
+  height: 1px;
+  background: rgba(22, 131, 255, 0.65);
+  box-shadow: 0 0 10px rgba(22, 131, 255, 0.35);
+}
+
+.contact-meta-text {
+  color: rgba(255, 255, 255, 0.38);
+  font-family: var(--font-display);
+  font-size: 9px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  transition:
+    color 0.35s ease,
+    text-shadow 0.35s ease;
+}
+
+.contact-meta-item:hover .contact-meta-text {
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0 0 18px rgba(22, 131, 255, 0.2);
+}
+
+.contact-form-wrap {
+  position: relative;
+  padding: 42px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.012)),
+    rgba(5, 8, 13, 0.64);
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 5px;
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.contact-form-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 12%;
+  width: 76%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(22, 131, 255, 0.65), transparent);
+  box-shadow: 0 0 18px rgba(22, 131, 255, 0.4);
+}
+
+.contact-form-wrap::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  top: -150px;
+  right: -100px;
+  border-radius: 50%;
+  background: rgba(22, 131, 255, 0.08);
+  filter: blur(55px);
+  pointer-events: none;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 44px;
+}
+
+.form-title {
+  color: rgba(255, 255, 255, 0.82);
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+.form-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 7px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.form-status-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #37b77c;
+  box-shadow: 0 0 9px rgba(55, 183, 124, 0.75);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 18px;
+}
+
+.form-field {
+  position: relative;
+}
+
+.form-field-full {
+  grid-column: 1 / -1;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.28);
+  font-family: var(--font-display);
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  color: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.018);
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+  outline: none;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 300;
+  transition:
+    border-color 0.4s ease,
+    box-shadow 0.4s ease,
+    background 0.4s ease;
+}
+
+.form-input {
+  height: 43px;
+  padding: 0 8px;
+}
+
+.form-textarea {
+  min-height: 100px;
+  padding: 12px 8px;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.16);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-bottom-color: rgba(22, 131, 255, 0.65);
+  box-shadow: 0 7px 20px -14px rgba(22, 131, 255, 0.75);
+  background: rgba(22, 131, 255, 0.015);
+}
+
+.form-submit-wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 35px;
+}
+
+.form-submit {
+  min-width: 150px;
+}
+
+.form-success {
+  display: none;
+  margin-top: 20px;
+  padding: 13px 16px;
+  color: rgba(255, 255, 255, 0.62);
+  background: rgba(22, 131, 255, 0.06);
+  border: 1px solid rgba(22, 131, 255, 0.2);
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+.form-success.is-visible {
+  display: block;
+}
+
+.footer {
+  position: relative;
+  padding: 70px 0 35px;
+  background: #020407;
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 300px;
+  left: 50%;
+  top: -260px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: rgba(22, 131, 255, 0.075);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  padding-bottom: 65px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.footer-brand-name {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  padding-left: 0.22em;
+}
+
+.footer-tagline {
+  color: rgba(255, 255, 255, 0.28);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+}
+
+.footer-links {
+  display: flex;
+  gap: 55px;
+}
+
+.footer-link-group {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.footer-link-title {
+  margin-bottom: 6px;
+  color: rgba(255, 255, 255, 0.22);
+  font-family: var(--font-display);
+  font-size: 7px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.42);
+  font-family: var(--font-display);
+  font-size: 9px;
+  transition:
+    color 0.3s ease,
+    text-shadow 0.3s ease,
+    transform 0.35s var(--ease);
+}
+
+.footer-link:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+  text-shadow: 0 0 15px rgba(22, 131, 255, 0.25);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.footer-copy,
+.footer-location {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 7px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.footer-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-location::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 8px rgba(22, 131, 255, 0.8);
+}
+
+.glow-title {
+  transition:
+    color 0.45s ease,
+    text-shadow 0.45s ease;
+}
+
+.glow-title:hover {
+  color: #ffffff;
+  text-shadow:
+    0 0 14px rgba(22, 131,
+document.addEventListener("DOMContentLoaded", () => {
+  "use strict";
+
+  const body = document.body;
+  const header = document.querySelector(".site-header");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mobileMenu = document.querySelector(".mobile-menu");
+  const mobileMenuBackdrop = document.querySelector(".mobile-menu-backdrop");
+  const menuClose = document.querySelector(".menu-close");
+  const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+  const navLinks = document.querySelectorAll(".nav-link");
+  const revealElements = document.querySelectorAll(".reveal");
+  const cursorGlow = document.querySelector(".cursor-glow");
+  const loader = document.querySelector(".page-loader");
+  const carousel = document.querySelector(".product-carousel");
+  const carouselCards = document.querySelectorAll(".product-card");
+  const carouselPrev = document.querySelector("[data-carousel-prev]");
+  const carouselNext = document.querySelector("[data-carousel-next]");
+  const progressCurrent = document.querySelector(".carousel-progress-current");
+  const progressFill = document.querySelector("#carousel-progress-fill");
+  const contactForm = document.querySelector(".contact-form");
+  const formSuccess = document.querySelector(".form-success");
+
+  let lastScrollY = window.scrollY;
+  let menuIsOpen = false;
+  let isPointerInsideCarousel = false;
+  let carouselDragging = false;
+  let carouselStartX = 0;
+  let carouselStartScroll = 0;
+
+  const closeMenu = () => {
+    if (!mobileMenu || !menuToggle) {
+      return;
+    }
+
+    menuIsOpen = false;
+    mobileMenu.classList.remove("is-open");
+    menuToggle.classList.remove("is-open");
+    body.classList.remove("menu-open");
+    menuToggle.setAttribute("aria-expanded", "false");
+  };
+
+  const openMenu = () => {
+    if (!mobileMenu || !menuToggle) {
+      return;
+    }
+
+    menuIsOpen = true;
+    mobileMenu.classList.add("is-open");
+    menuToggle.classList.add("is-open");
+    body.classList.add("menu-open");
+    menuToggle.setAttribute("aria-expanded", "true");
+  };
+
+  if (menuToggle) {
+    menuToggle.addEventListener("click", () => {
+      if (menuIsOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+  }
+
+  if (menuClose) {
+    menuClose.addEventListener("click", closeMenu);
+  }
+
+  if (mobileMenuBackdrop) {
+    mobileMenuBackdrop.addEventListener("click", closeMenu);
+  }
+
+  mobileLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      closeMenu();
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menuIsOpen) {
+      closeMenu();
+    }
+  });
+
+  const updateHeader = () => {
+    const currentScroll = window.scrollY;
+
+    if (!header) {
+      return;
+    }
+
+    if (currentScroll > 40) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+
+    lastScrollY = currentScroll;
+  };
+
+  updateHeader();
+
+  window.addEventListener(
+    "scroll",
+    updateHeader,
+    {
+      passive: true
+    }
+  );
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.12,
+      rootMargin: "0px 0px -60px 0px"
+    }
+  );
+
+  revealElements.forEach((element) => {
+    revealObserver.observe(element);
+  });
+
+  const sections = document.querySelectorAll("section[id]");
+
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        const activeId = entry.target.getAttribute("id");
+
+        navLinks.forEach((link) => {
+          const linkTarget = link.getAttribute("href");
+
+          if (linkTarget === `#${activeId}`) {
+            link.classList.add("is-active");
+          } else {
+            link.classList.remove("is-active");
+          }
+        });
+      });
+    },
+    {
+      threshold: 0.35
+    }
+  );
+
+  sections.forEach((section) => {
+    sectionObserver.observe(section);
+  });
+
+  if (cursorGlow) {
+    let cursorX = 0;
+    let cursorY = 0;
+    let glowX = 0;
+    let glowY = 0;
+
+    window.addEventListener(
+      "pointermove",
+      (event) => {
+        cursorX = event.clientX;
+        cursorY = event.clientY;
+        cursorGlow.style.opacity = "1";
+      },
+      {
+        passive: true
+      }
+    );
+
+    window.addEventListener(
+      "pointerleave",
+      () => {
+        cursorGlow.style.opacity = "0";
+      },
+      {
+        passive: true
+      }
+    );
+
+    const animateCursorGlow = () => {
+      glowX += (cursorX - glowX) * 0.08;
+      glowY += (cursorY - glowY) * 0.08;
+
+      cursorGlow.style.left = `${glowX}px`;
+      cursorGlow.style.top = `${glowY}px`;
+
+      requestAnimationFrame(animateCursorGlow);
+    };
+
+    animateCursorGlow();
+  }
+
+  const smoothLinks = document.querySelectorAll('a[href^="#"]');
+
+  smoothLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetId = link.getAttribute("href");
+
+      if (!targetId || targetId === "#") {
+        return;
+      }
+
+      const target = document.querySelector(targetId);
+
+      if (!target) {
+        return;
+      }
+
+      event.preventDefault();
+
+      const headerHeight = header
+        ? header.getBoundingClientRect().height
+        : 0;
+
+      const targetPosition =
+        target.getBoundingClientRect().top +
+        window.scrollY -
+        headerHeight -
+        10;
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth"
+      });
+    });
+  });
+
+  const updateCarouselProgress = () => {
+    if (!carousel || carouselCards.length === 0) {
+      return;
+    }
+
+    const scrollLeft = carousel.scrollLeft;
+    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+
+    let progress = 0;
+
+    if (maxScroll > 0) {
+      progress = scrollLeft / maxScroll;
+    }
+
+    progress = Math.max(0, Math.min(1, progress));
+
+    if (progressFill) {
+      progressFill.style.width = `${Math.max(8, progress * 100)}%`;
+    }
+
+    let closestIndex = 0;
+    let closestDistance = Infinity;
+
+    carouselCards.forEach((card, index) => {
+      const distance = Math.abs(
+        card.offsetLeft - scrollLeft
+      );
+
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = index;
+      }
+    });
+
+    if (progressCurrent) {
+      progressCurrent.textContent = String(
+        closestIndex + 1
+      ).padStart(2, "0");
+    }
+  };
+
+  if (carousel) {
+    carousel.addEventListener(
+      "scroll",
+      updateCarouselProgress,
+      {
+        passive: true
+      }
+    );
+
+    updateCarouselProgress();
+  }
+
+  const scrollToCard = (direction) => {
+    if (!carousel || carouselCards.length === 0) {
+      return;
+    }
+
+    const currentScroll = carousel.scrollLeft;
+
+    let closestIndex = 0;
+    let closestDistance = Infinity;
+
+    carouselCards.forEach((card, index) => {
+      const distance = Math.abs(
+        card.offsetLeft - currentScroll
+      );
+
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = index;
+      }
+    });
+
+    let nextIndex = closestIndex + direction;
+
+    nextIndex = Math.max(
+      0,
+      Math.min(
+        carouselCards.length - 1,
+        nextIndex
+      )
+    );
+
+    carousel.scrollTo({
+      left: carouselCards[nextIndex].offsetLeft,
+      behavior: "smooth"
+    });
+  };
+
+  if (carouselPrev) {
+    carouselPrev.addEventListener("click", () => {
+      scrollToCard(-1);
+    });
+  }
+
+  if (carouselNext) {
+    carouselNext.addEventListener("click", () => {
+      scrollToCard(1);
+    });
+  }
+
+  if (carousel) {
+    carousel.addEventListener(
+      "mouseenter",
+      () => {
+        isPointerInsideCarousel = true;
+      }
+    );
+
+    carousel.addEventListener(
+      "mouseleave",
+      () => {
+        isPointerInsideCarousel = false;
+        carouselDragging = false;
+        carousel.classList.remove("is-dragging");
+      }
+    );
+
+    carousel.addEventListener(
+      "pointerdown",
+      (event) => {
+        if (event.pointerType === "touch") {
+          return;
+        }
+
+        carouselDragging = true;
+        carouselStartX = event.clientX;
+        carouselStartScroll = carousel.scrollLeft;
+
+        carousel.classList.add("is-dragging");
+
+        try {
+          carousel.setPointerCapture(event.pointerId);
+        } catch (error) {
+          console.warn(
+            "Carousel pointer capture unavailable.",
+            error
+          );
+        }
+      }
+    );
+
+    carousel.addEventListener(
+      "pointermove",
+      (event) => {
+        if (!carouselDragging) {
+          return;
+        }
+
+        const distance =
+          event.clientX - carouselStartX;
+
+        carousel.scrollLeft =
+          carouselStartScroll - distance * 1.15;
+      }
+    );
+
+    carousel.addEventListener(
+      "pointerup",
+      (event) => {
+        carouselDragging = false;
+        carousel.classList.remove("is-dragging");
+
+        try {
+          carousel.releasePointerCapture(
+            event.pointerId
+          );
+        } catch (error) {
+          console.warn(
+            "Carousel pointer release unavailable.",
+            error
+          );
+        }
+      }
+    );
+
+    carousel.addEventListener(
+      "pointercancel",
+      () => {
+        carouselDragging = false;
+        carousel.classList.remove("is-dragging");
+      }
+    );
+
+    carousel.addEventListener(
+      "wheel",
+      (event) => {
+        if (!isPointerInsideCarousel) {
+          return;
+        }
+
+        if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) {
+          return;
+        }
+
+        const canScrollHorizontally =
+          carousel.scrollWidth > carousel.clientWidth;
+
+        if (!canScrollHorizontally) {
+          return;
+        }
+
+        event.preventDefault();
+
+        carousel.scrollLeft += event.deltaY * 0.9;
+      },
+      {
+        passive: false
+      }
+    );
+  }
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const submitButton =
+        contactForm.querySelector(
+          'button[type="submit"]'
+        );
+
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
+      }
+
+      window.setTimeout(() => {
+        if (formSuccess) {
+          formSuccess.classList.add("is-visible");
+          formSuccess.textContent =
+            "Message interface ready. Connect this form to your preferred email service when deploying.";
+        }
+
+        contactForm.reset();
+
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = "Send Message";
+        }
+      }, 700);
+    });
+  }
+
+  const glowTitles =
+    document.querySelectorAll(".glow-title");
+
+  glowTitles.forEach((title) => {
+    title.addEventListener("pointerenter", () => {
+      title.classList.add("blue-glow");
+    });
+
+    title.addEventListener("pointerleave", () => {
+      title.classList.remove("blue-glow");
+    });
+  });
+
+  const magneticButtons =
+    document.querySelectorAll(
+      ".button-primary, .carousel-button"
+    );
+
+  magneticButtons.forEach((button) => {
+    button.addEventListener(
+      "pointermove",
+      (event) => {
+        const rect =
+          button.getBoundingClientRect();
+
+        const x =
+          event.clientX -
+          rect.left -
+          rect.width / 2;
+
+        const y =
+          event.clientY -
+          rect.top -
+          rect.height / 2;
+
+        button.style.transform =
+          `translate(${x * 0.08}px, ${y * 0.08}px)`;
+      }
+    );
+
+    button.addEventListener(
+      "pointerleave",
+      () => {
+        button.style.transform = "";
+      }
+    );
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 850 && menuIsOpen) {
+      closeMenu();
+    }
+
+    updateCarouselProgress();
+  });
+
+  if (loader) {
+    window.setTimeout(() => {
+      loader.classList.add("is-hidden");
+    }, 900);
+  }
+
+  document.documentElement.style.setProperty(
+    "--zexvon-ready",
+    "1"
+  );
+
+  console.log(
+    "%cZEXVON",
+    "font-size:24px;font-weight:600;color:#1683ff;"
+  );
+
+  console.log(
+    "%cTurning Ideas Into Reality.",
+    "font-size:12px;color:#9ba7b6;"
+  );
+});
+          const hero = document.querySelector(".hero");
+
+  if (hero) {
+    let heroAnimationFrame = null;
+    let heroTargetX = 0;
+    let heroTargetY = 0;
+    let heroCurrentX = 0;
+    let heroCurrentY = 0;
+
+    hero.addEventListener(
+      "pointermove",
+      (event) => {
+        const rect = hero.getBoundingClientRect();
+
+        heroTargetX =
+          (event.clientX - rect.left - rect.width / 2) /
+          rect.width;
+
+        heroTargetY =
+          (event.clientY - rect.top - rect.height / 2) /
+          rect.height;
+      },
+      {
+        passive: true
+      }
+    );
+
+    hero.addEventListener(
+      "pointerleave",
+      () => {
+        heroTargetX = 0;
+        heroTargetY = 0;
+      }
+    );
+
+    const animateHeroParallax = () => {
+      heroCurrentX +=
+        (heroTargetX - heroCurrentX) * 0.045;
+
+      heroCurrentY +=
+        (heroTargetY - heroCurrentY) * 0.045;
+
+      hero.style.setProperty(
+        "--mouse-x",
+        `${heroCurrentX * 24}px`
+      );
+
+      hero.style.setProperty(
+        "--mouse-y",
+        `${heroCurrentY * 18}px`
+      );
+
+      heroAnimationFrame =
+        requestAnimationFrame(
+          animateHeroParallax
+        );
+    };
+
+    heroAnimationFrame =
+      requestAnimationFrame(
+        animateHeroParallax
+      );
+  }
+
+  const animatedNumbers =
+    document.querySelectorAll(
+      "[data-count]"
+    );
+
+  const numberObserver =
+    new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          const element = entry.target;
+          const target =
+            Number(
+              element.getAttribute(
+                "data-count"
+              )
+            ) || 0;
+
+          const duration = 1200;
+          const startTime = performance.now();
+
+          const animateNumber = (currentTime) => {
+            const elapsed =
+              currentTime - startTime;
+
+            const progress =
+              Math.min(
+                elapsed / duration,
+                1
+              );
+
+            const eased =
+              1 -
+              Math.pow(
+                1 - progress,
+                3
+              );
+
+            element.textContent =
+              Math.floor(
+                target * eased
+              ).toString();
+
+            if (progress < 1) {
+              requestAnimationFrame(
+                animateNumber
+              );
+            } else {
+              element.textContent =
+                target.toString();
+            }
+          };
+
+          requestAnimationFrame(
+            animateNumber
+          );
+
+          numberObserver.unobserve(
+            element
+          );
+        });
+      },
+      {
+        threshold: 0.5
+      }
+    );
+
+  animatedNumbers.forEach((number) => {
+    numberObserver.observe(number);
+  });
+
+  const floatingElements =
+    document.querySelectorAll(
+      "[data-float]"
+    );
+
+  floatingElements.forEach(
+    (element, index) => {
+      const speed =
+        Number(
+          element.getAttribute(
+            "data-float"
+          )
+        ) || 1;
+
+      let time = index * 1.7;
+
+      const animateFloat = () => {
+        time += 0.012 * speed;
+
+        const y =
+          Math.sin(time) * 7;
+
+        const rotation =
+          Math.sin(time * 0.7) * 1.4;
+
+        element.style.transform =
+          `translate3d(0, ${y}px, 0) rotate(${rotation}deg)`;
+
+        requestAnimationFrame(
+          animateFloat
+        );
+      };
+
+      animateFloat();
+    }
+  );
+
+  const parallaxElements =
+    document.querySelectorAll(
+      "[data-parallax]"
+    );
+
+  const updateParallax =
+    () => {
+      const viewportHeight =
+        window.innerHeight;
+
+      parallaxElements.forEach(
+        (element) => {
+          const rect =
+            element.getBoundingClientRect();
+
+          const speed =
+            Number(
+              element.getAttribute(
+                "data-parallax"
+              )
+            ) || 0.08;
+
+          const center =
+            rect.top +
+            rect.height / 2;
+
+          const distance =
+            center -
+            viewportHeight / 2;
+
+          const translate =
+            distance * speed;
+
+          element.style.setProperty(
+            "--parallax-y",
+            `${translate}px`
+          );
+        }
+      );
+    };
+
+  let parallaxTicking = false;
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (parallaxTicking) {
+        return;
+      }
+
+      parallaxTicking = true;
+
+      requestAnimationFrame(() => {
+        updateParallax();
+        parallaxTicking = false;
+      });
+    },
+    {
+      passive: true
+    }
+  );
+
+  updateParallax();
+
+  const productCards =
+    document.querySelectorAll(
+      ".product-card"
+    );
+
+  productCards.forEach(
+    (card) => {
+      card.addEventListener(
+        "pointerenter",
+        () => {
+          productCards.forEach(
+            (otherCard) => {
+              if (
+                otherCard !== card
+              ) {
+                otherCard.style.opacity =
+                  "0.58";
+              }
+            }
+          );
+        }
+      );
+
+      card.addEventListener(
+        "pointerleave",
+        () => {
+          productCards.forEach(
+            (otherCard) => {
+              otherCard.style.opacity =
+                "";
+            }
+          );
+        }
+      );
+    }
+  );
+
+  const magneticLinks =
+    document.querySelectorAll(
+      ".product-link, .footer-link, .nav-link"
+    );
+
+  magneticLinks.forEach(
+    (link) => {
+      link.addEventListener(
+        "pointermove",
+        (event) => {
+          const rect =
+            link.getBoundingClientRect();
+
+          const offsetX =
+            event.clientX -
+            rect.left -
+            rect.width / 2;
+
+          const offsetY =
+            event.clientY -
+            rect.top -
+            rect.height / 2;
+
+          link.style.transform =
+            `translate(${offsetX * 0.04}px, ${offsetY * 0.04}px)`;
+        }
+      );
+
+      link.addEventListener(
+        "pointerleave",
+        () => {
+          link.style.transform =
+            "";
+        }
+      );
+    }
+  );
+
+  const glowObjects =
+    document.querySelectorAll(
+      ".hero-orbit, .vision-symbol, .mystery-core, .aura-ring-model"
+    );
+
+  glowObjects.forEach(
+    (object) => {
+      object.addEventListener(
+        "pointerenter",
+        () => {
+          object.style.filter =
+            "drop-shadow(0 0 22px rgba(22, 131, 255, 0.18))";
+        }
+      );
+
+      object.addEventListener(
+        "
+              document.addEventListener("DOMContentLoaded", () => {
+  "use strict";
+
+  const root = document.documentElement;
+  const body = document.body;
+
+  const ambientCanvas =
+    document.querySelector("#ambient-canvas");
+
+  if (ambientCanvas) {
+    const ctx =
+      ambientCanvas.getContext("2d", {
+        alpha: true
+      });
+
+    let width = 0;
+    let height = 0;
+    let animationFrame = 0;
+    let particles = [];
+    let mouseX = 0.5;
+    let mouseY = 0.5;
+
+    const particleCount =
+      window.innerWidth < 700
+        ? 42
+        : 78;
+
+    const resizeCanvas = () => {
+      const ratio =
+        Math.min(
+          window.devicePixelRatio || 1,
+          2
+        );
+
+      width =
+        window.innerWidth;
+
+      height =
+        window.innerHeight;
+
+      ambientCanvas.width =
+        width * ratio;
+
+      ambientCanvas.height =
+        height * ratio;
+
+      ambientCanvas.style.width =
+        `${width}px`;
+
+      ambientCanvas.style.height =
+        `${height}px`;
+
+      ctx.setTransform(
+        ratio,
+        0,
+        0,
+        ratio,
+        0,
+        0
+      );
+    };
+
+    const createParticle = () => {
+      return {
+        x:
+          Math.random() *
+          width,
+
+        y:
+          Math.random() *
+          height,
+
+        size:
+          Math.random() *
+            1.5 +
+          0.35,
+
+        speed:
+          Math.random() *
+            0.22 +
+          0.04,
+
+        drift:
+          Math.random() *
+            0.35 -
+          0.175,
+
+        opacity:
+          Math.random() *
+            0.48 +
+          0.08,
+
+        phase:
+          Math.random() *
+          Math.PI *
+          2,
+
+        pulse:
+          Math.random() *
+            0.018 +
+          0.004
+      };
+    };
+
+    const createParticles = () => {
+      particles =
+        Array.from(
+          {
+            length:
+              particleCount
+          },
+          createParticle
+        );
+    };
+
+    const drawParticle = (
+      particle,
+      time
+    ) => {
+      const pulse =
+        Math.sin(
+          time *
+            particle.pulse +
+            particle.phase
+        );
+
+      const alpha =
+        Math.max(
+          0.02,
+          particle.opacity +
+            pulse * 0.08
+        );
+
+      ctx.beginPath();
+
+      ctx.arc(
+        particle.x,
+        particle.y,
+        particle.size,
+        0,
+        Math.PI * 2
+      );
+
+      ctx.fillStyle =
+        `rgba(90, 165, 255, ${alpha})`;
+
+      ctx.fill();
+    };
+
+    const updateParticle = (
+      particle
+    ) => {
+      particle.y -=
+        particle.speed;
+
+      particle.x +=
+        particle.drift +
+        (mouseX - 0.5) *
+          0.035;
+
+      if (
+        particle.y <
+        -10
+      ) {
+        particle.y =
+          height + 10;
+
+        particle.x =
+          Math.random() *
+          width;
+      }
+
+      if (
+        particle.x <
+        -10
+      ) {
+        particle.x =
+          width + 10;
+      }
+
+      if (
+        particle.x >
+        width + 10
+      ) {
+        particle.x =
+          -10;
+      }
+    };
+
+    const drawConnections = () => {
+      const maxDistance =
+        width < 700
+          ? 85
+          : 115;
+
+      for (
+        let i = 0;
+        i < particles.length;
+        i += 1
+      ) {
+        for (
+          let j = i + 1;
+          j < particles.length;
+          j += 1
+        ) {
+          const first =
+            particles[i];
+
+          const second =
+            particles[j];
+
+          const dx =
+            first.x -
+            second.x;
+
+          const dy =
+            first.y -
+            second.y;
+
+          const distance =
+            Math.sqrt(
+              dx * dx +
+                dy * dy
+            );
+
+          if (
+            distance >
+            maxDistance
+          ) {
+            continue;
+          }
+
+          const opacity =
+            (1 -
+              distance /
+                maxDistance) *
+            0.055;
+
+          ctx.beginPath();
+
+          ctx.moveTo(
+            first.x,
+            first.y
+          );
+
+          ctx.lineTo(
+            second.x,
+            second.y
+          );
+
+          ctx.strokeStyle =
+            `rgba(30, 125, 255, ${opacity})`;
+
+          ctx.lineWidth = 0.6;
+
+          ctx.stroke();
+        }
+      }
+    };
+
+    const renderAmbient =
+      (time) => {
+        ctx.clearRect(
+          0,
+          0,
+          width,
+          height
+        );
+
+        particles.forEach(
+          (particle) => {
+            updateParticle(
+              particle
+            );
+
+            drawParticle(
+              particle,
+              time
+            );
+          }
+        );
+
+        drawConnections();
+
+        animationFrame =
+          requestAnimationFrame(
+            renderAmbient
+          );
+      };
+
+    window.addEventListener(
+      "resize",
+      resizeCanvas,
+      {
+        passive: true
+      }
+    );
+
+    window.addEventListener(
+      "pointermove",
+      (event) => {
+        mouseX =
+          event.clientX /
+          Math.max(
+            window.innerWidth,
+            1
+          );
+
+        mouseY =
+          event.clientY /
+          Math.max(
+            window.innerHeight,
+            1
+          );
+      },
+      {
+        passive: true
+      }
+    );
+
+    resizeCanvas();
+    createParticles();
+          const heroCanvas =
+    document.querySelector("#hero-canvas");
+
+  if (heroCanvas) {
+    const heroContext =
+      heroCanvas.getContext("2d", {
+        alpha: true
+      });
+
+    let canvasWidth = 0;
+    let canvasHeight = 0;
+    let deviceRatio = 1;
+    let heroFrame = 0;
+
+    const orbitObjects = [];
+    const heroParticleObjects = [];
+
+    const resizeHeroCanvas = () => {
+      deviceRatio =
+        Math.min(
+          window.devicePixelRatio || 1,
+          2
+        );
+
+      canvasWidth =
+        window.innerWidth;
+
+      canvasHeight =
+        window.innerHeight;
+
+      heroCanvas.width =
+        canvasWidth *
+        deviceRatio;
+
+      heroCanvas.height =
+        canvasHeight *
+        deviceRatio;
+
+      heroCanvas.style.width =
+        `${canvasWidth}px`;
+
+      heroCanvas.style.height =
+        `${canvasHeight}px`;
+
+      heroContext.setTransform(
+        deviceRatio,
+        0,
+        0,
+        deviceRatio,
+        0,
+        0
+      );
+    };
+
+    const createHeroParticle =
+      () => {
+        return {
+          x:
+            Math.random() *
+            canvasWidth,
+
+          y:
+            Math.random() *
+            canvasHeight,
+
+          radius:
+            Math.random() *
+              1.1 +
+            0.25,
+
+          alpha:
+            Math.random() *
+              0.34 +
+            0.04,
+
+          speed:
+            Math.random() *
+              0.22 +
+            0.03,
+
+          phase:
+            Math.random() *
+            Math.PI *
+            2,
+
+          frequency:
+            Math.random() *
+              0.012 +
+            0.004
+        };
+      };
+
+    const createHeroParticles =
+      () => {
+        const count =
+          window.innerWidth < 600
+            ? 34
+            : 64;
+
+        heroParticleObjects.length =
+          0;
+
+        for (
+          let index = 0;
+          index < count;
+          index += 1
+        ) {
+          heroParticleObjects.push(
+            createHeroParticle()
+          );
+        }
+      };
+
+    const createOrbitObject =
+      (
+        radius,
+        speed,
+        phase,
+        size
+      ) => {
+        return {
+          radius,
+          speed,
+          phase,
+          size
+        };
+      };
+
+    const initializeOrbits =
+      () => {
+        orbitObjects.length =
+          0;
+
+        orbitObjects.push(
+          createOrbitObject(
+            Math.min(
+              canvasWidth,
+              canvasHeight
+            ) *
+              0.31,
+            0.00035,
+            0,
+            1.3
+          )
+        );
+
+        orbitObjects.push(
+          createOrbitObject(
+            Math.min(
+              canvasWidth,
+              canvasHeight
+            ) *
+              0.24,
+            -0.00052,
+            Math.PI / 2,
+            1
+          )
+        );
+
+        orbitObjects.push(
+          createOrbitObject(
+            Math.min(
+              canvasWidth,
+              canvasHeight
+            ) *
+              0.38,
+            0.0002,
+            Math.PI,
+            0.7
+          )
+        );
+      };
+
+    const drawHeroBackground =
+      (time) => {
+        heroContext.clearRect(
+          0,
+          0,
+          canvasWidth,
+          canvasHeight
+        );
+
+        const centerX =
+          canvasWidth * 0.5;
+
+        const centerY =
+          canvasHeight * 0.48;
+
+        const gradient =
+          heroContext.createRadialGradient(
+            centerX,
+            centerY,
+            0,
+            centerX,
+            centerY,
+            Math.max(
+              canvasWidth,
+              canvasHeight
+            ) *
+              0.48
+          );
+
+        gradient.addColorStop(
+          0,
+          "rgba(15, 104, 220, 0.075)"
+        );
+
+        gradient.addColorStop(
+          0.3,
+          "rgba(12, 65, 135, 0.035)"
+        );
+
+        gradient.addColorStop(
+          1,
+          "rgba(0, 0, 0, 0)"
+        );
+
+        heroContext.fillStyle =
+          gradient;
+
+        heroContext.fillRect(
+          0,
+          0,
+          canvasWidth,
+          canvasHeight
+        );
+
+        heroParticleObjects.forEach(
+          (particle) => {
+            particle.y -=
+              particle.speed;
+
+            if (
+              particle.y <
+              -5
+            ) {
+              particle.y =
+                canvasHeight + 5;
+
+              particle.x =
+                Math.random() *
+                canvasWidth;
+            }
+
+            const pulse =
+              Math.sin(
+                time *
+                  particle.frequency +
+                  particle.phase
+              );
+
+            const alpha =
+              Math.max(
+                0.01,
+                particle.alpha +
+                  pulse * 0.035
+              );
+
+            heroContext.beginPath();
+
+            heroContext.arc(
+              particle.x,
+              particle.y,
+              particle.radius,
+              0,
+              Math.PI * 2
+            );
+
+            heroContext.fillStyle =
+              `rgba(105, 178, 255, ${alpha})`;
+
+            heroContext.fill();
+          }
+        );
+
+        orbitObjects.forEach(
+          (orbit) => {
+            const angle =
+              orbit.phase +
+              time *
+                orbit.speed;
+
+            const x =
+              centerX +
+              Math.cos(angle) *
+                orbit.radius;
+
+            const y =
+              centerY +
+              Math.sin(angle) *
+                orbit.radius *
+                0.42;
+
+            heroContext.beginPath();
+
+            heroContext.arc(
+              x,
+              y,
+              orbit.size,
+              0,
+              Math.PI * 2
+            );
+
+            heroContext.fillStyle =
+              "rgba(62, 151, 255, 0.62)";
+
+            heroContext.shadowBlur =
+              14;
+
+            heroContext.shadowColor =
+              "rgba(22, 131, 255, 0.7)";
+
+            heroContext.fill();
+
+            heroContext.shadowBlur =
+              0;
+          }
+        );
+
+        const scanPosition =
+          (time * 0.000035) %
+          1;
+
+        const scanY =
+          canvasHeight *
+          (0.2 +
+            scanPosition *
+              0.6);
+
+        const scanGradient =
+          heroContext.createLinearGradient(
+            0,
+            scanY,
+            canvasWidth,
+            scanY
+          );
+
+        scanGradient.addColorStop(
+          0,
+          "rgba(22, 131, 255, 0)"
+        );
+
+        scanGradient.addColorStop(
+          0.5,
+          "rgba(22, 131, 255, 0.09)"
+        );
+
+        scanGradient.addColorStop(
+          1,
+          "rgba(22, 131, 255, 0)"
+        );
+
+        heroContext.fillStyle =
+          scanGradient;
+
+        heroContext.fillRect(
+          0,
+          scanY,
+          canvasWidth,
+          1
+        );
+
+        heroFrame =
+          requestAnimationFrame(
+            drawHeroBackground
+          );
+      };
+
+    window.addEventListener(
+      "resize",
+      () => {
+        resizeHeroCanvas();
+        createHeroParticles();
+        initializeOrbits();
+      },
+      {
+        passive: true
+      }
+    );
+
+    resizeHeroCanvas();
+    createHeroParticles();
+    initializeOrbits();
+
+    if (
+      !window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches
+    ) {
+      heroFrame =
+        requestAnimationFrame(
+          drawHeroBackground
+        );
+    }
+  }
+
+  const animatedTitles =
+    document.querySelectorAll(
+      "[data-text-reveal]"
+    );
+
+  animatedTitles.forEach(
+    (title) => {
+      const text =
+        title.textContent.trim();
+
+      if (!text) {
+        return;
+      }
+
+      title.innerHTML = "";
+
+      const words =
+        text.split(/\s+/);
+
+      words.forEach(
+        (word, index) => {
+          const wrapper =
+            document.createElement(
+              "span"
+            );
+
+          wrapper.className =
+            "text-reveal-word";
+
+          wrapper.style.transitionDelay =
+            `${index * 90}ms`;
+
+          wrapper.textContent =
+            word;
+
+          title.appendChild(
+            wrapper
+          );
+
+          if (
+            index <
+            words.length - 1
+          ) {
+            title.appendChild(
+              document.createTextNode(
+                " "
+              )
+            );
+          }
+        }
+      );
+    }
+  );
+
+  const textRevealObserver =
+    new IntersectionObserver(
+      (entries) => {
+        entries.forEach(
+          (entry) => {
+            if (
+              !entry.isIntersecting
+            ) {
+              return;
+            }
+
+            entry.target.classList.add(
+              "text-revealed"
+            );
+
+            textRevealObserver.unobserve(
+              entry.target
+            );
+          }
+        );
+      },
+      {
+              const particleLayers =
+    document.querySelectorAll(
+      "[data-particle-layer]"
+    );
+
+  particleLayers.forEach(
+    (layer, layerIndex) => {
+      const particleCanvas =
+        document.createElement(
+          "canvas"
+        );
+
+      particleCanvas.className =
+        "particle-layer-canvas";
+
+      layer.appendChild(
+        particleCanvas
+      );
+
+      const particleContext =
+        particleCanvas.getContext(
+          "2d"
+        );
+
+      let particleWidth = 0;
+      let particleHeight = 0;
+      let particleRatio = 1;
+      let particleFrame = 0;
+
+      const particleAmount =
+        window.innerWidth < 600
+          ? 20
+          : 38;
+
+      const layerParticles =
+        [];
+
+      const resizeParticleLayer =
+        () => {
+          particleRatio =
+            Math.min(
+              window.devicePixelRatio ||
+                1,
+              2
+            );
+
+          particleWidth =
+            layer.clientWidth ||
+            window.innerWidth;
+
+          particleHeight =
+            layer.clientHeight ||
+            window.innerHeight;
+
+          particleCanvas.width =
+            particleWidth *
+            particleRatio;
+
+          particleCanvas.height =
+            particleHeight *
+            particleRatio;
+
+          particleCanvas.style.width =
+            `${particleWidth}px`;
+
+          particleCanvas.style.height =
+            `${particleHeight}px`;
+
+          particleContext.setTransform(
+            particleRatio,
+            0,
+            0,
+            particleRatio,
+            0,
+            0
+          );
+        };
+
+      const createLayerParticle =
+        () => {
+          return {
+            x:
+              Math.random() *
+              particleWidth,
+
+            y:
+              Math.random() *
+              particleHeight,
+
+            size:
+              Math.random() *
+                1.2 +
+              0.25,
+
+            opacity:
+              Math.random() *
+                0.24 +
+              0.03,
+
+            speed:
+              Math.random() *
+                0.12 +
+              0.015,
+
+            direction:
+              Math.random() >
+              0.5
+                ? 1
+                : -1,
+
+            phase:
+              Math.random() *
+              Math.PI *
+              2
+          };
+        };
+
+      const buildLayerParticles =
+        () => {
+          layerParticles.length =
+            0;
+
+          for (
+            let index = 0;
+            index <
+            particleAmount;
+            index += 1
+          ) {
+            layerParticles.push(
+              createLayerParticle()
+            );
+          }
+        };
+
+      const renderParticleLayer =
+        (time) => {
+          particleContext.clearRect(
+            0,
+            0,
+            particleWidth,
+            particleHeight
+          );
+
+          layerParticles.forEach(
+            (particle) => {
+              particle.y -=
+                particle.speed;
+
+              particle.x +=
+                Math.sin(
+                  time *
+                    0.00025 +
+                    particle.phase
+                ) *
+                0.025 *
+                particle.direction;
+
+              if (
+                particle.y <
+                -5
+              ) {
+                particle.y =
+                  particleHeight +
+                  5;
+
+                particle.x =
+                  Math.random() *
+                  particleWidth;
+              }
+
+              const opacity =
+                particle.opacity *
+                (0.75 +
+                  Math.sin(
+                    time *
+                      0.001 +
+                      particle.phase
+                  ) *
+                    0.25);
+
+              particleContext.beginPath();
+
+              particleContext.arc(
+                particle.x,
+                particle.y,
+                particle.size,
+                0,
+                Math.PI * 2
+              );
+
+              particleContext.fillStyle =
+                `rgba(30, 130, 255, ${opacity})`;
+
+              particleContext.fill();
+            }
+          );
+
+          particleFrame =
+            requestAnimationFrame(
+              renderParticleLayer
+            );
+        };
+
+      window.addEventListener(
+        "resize",
+        () => {
+          resizeParticleLayer();
+          buildLayerParticles();
+        },
+        {
+          passive: true
+        }
+      );
+
+      resizeParticleLayer();
+      buildLayerParticles();
+
+      if (
+        !window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches
+      ) {
+        particleFrame =
+          requestAnimationFrame(
+            renderParticleLayer
+          );
+      }
+
+      layer.dataset.layerIndex =
+        String(layerIndex);
+    }
+  );
+
+  const glowPanels =
+    document.querySelectorAll(
+      ".glass-card, .about-card, .contact-form-wrap"
+    );
+
+  glowPanels.forEach(
+    (panel) => {
+      panel.addEventListener(
+        "pointermove",
+        (event) => {
+          const bounds =
+            panel.getBoundingClientRect();
+
+          const relativeX =
+            event.clientX -
+            bounds.left;
+
+          const relativeY =
+            event.clientY -
+            bounds.top;
+
+          panel.style.setProperty(
+            "--glow-x",
+            `${relativeX}px`
+          );
+
+          panel.style.setProperty(
+            "--glow-y",
+            `${relativeY}px`
+          );
+
+          panel.classList.add(
+            "is-hovered"
+          );
+        },
+        {
+          passive: true
+        }
+      );
+
+      panel.add
+                 const interactionTargets =
+    document.querySelectorAll(
+      "[data-interaction]"
+    );
+
+  interactionTargets.forEach(
+    (target) => {
+      target.addEventListener(
+        "pointerenter",
+        () => {
+          target.classList.add(
+            "interaction-active"
+          );
+        }
+      );
+
+      target.addEventListener(
+        "pointerleave",
+        () => {
+          target.classList.remove(
+            "interaction-active"
+          );
+        }
+      );
+
+      target.addEventListener(
+        "focus",
+        () => {
+          target.classList.add(
+            "interaction-active"
+          );
+        }
+      );
+
+      target.addEventListener(
+        "blur",
+        () => {
+          target.classList.remove(
+            "interaction-active"
+          );
+        }
+      );
+    }
+  );
+
+  const glowWords =
+    document.querySelectorAll(
+      "[data-glow-word]"
+    );
+
+  glowWords.forEach(
+    (word) => {
+      word.addEventListener(
+        "pointerenter",
+        () => {
+          word.style.color =
+            "#ffffff";
+
+          word.style.textShadow =
+            "0 0 10px rgba(22, 131, 255, 0.75), 0 0 28px rgba(22, 131, 255, 0.38)";
+        }
+      );
+
+      word.addEventListener(
+        "pointerleave",
+        () => {
+          word.style.color =
+            "";
+
+          word.style.textShadow =
+            "";
+        }
+      );
+    }
+  );
+
+  const timelineItems =
+    document.querySelectorAll(
+      ".timeline-item"
+    );
+
+  if (
+    timelineItems.length
+  ) {
+    const timelineObserver =
+      new IntersectionObserver(
+        (entries) => {
+          entries.forEach(
+            (entry) => {
+              if (
+                !entry.isIntersecting
+              ) {
+                return;
+              }
+
+              entry.target.classList.add(
+                "timeline-visible"
+              );
+
+              timelineObserver.unobserve(
+                entry.target
+              );
+            }
+          );
+        },
+        {
+          threshold: 0.2
+        }
+      );
+
+    timelineItems.forEach(
+      (item, index) => {
+        item.style.transitionDelay =
+          `${index * 100}ms`;
+
+        timelineObserver.observe(
+          item
+        );
+      }
+    );
+  }
+
+  const visionCards =
+    document.querySelectorAll(
+      ".vision-card"
+    );
+
+  visionCards.forEach(
+    (card) => {
+      card.addEventListener(
+        "pointermove",
+        (event) => {
+          const rect =
+            card.getBoundingClientRect();
+
+          const x =
+            event.clientX -
+            rect.left;
+
+          const y =
+            event.clientY -
+            rect.top;
+
+          card.style.setProperty(
+            "--vision-x",
+            `${x}px`
+          );
+
+          card.style.setProperty(
+            "--vision-y",
+            `${y}px`
+          );
+        },
+        {
+          passive: true
+        }
+      );
+    }
+  );
+
+  const contactInputs =
+    document.querySelectorAll(
+      ".contact-form input, .contact-form textarea"
+    );
+
+  contactInputs.forEach(
+    (input) => {
+      const updateInputState =
+        () => {
+          const wrapper =
+            input.closest(
+              ".field"
+            );
+
+          if (!wrapper) {
+            return;
+          }
+
+          if (
+            input.value.trim()
+          ) {
+            wrapper.classList.add(
+              "has-value"
+            );
+          } else {
+            wrapper.classList.remove(
+              "has-value"
+            );
+          }
+        };
+
+      input.addEventListener(
+        "input",
+        updateInputState
+      );
+
+      input.addEventListener(
+        "focus",
+        () => {
+          const wrapper =
+            input.closest(
+              ".field"
+            );
+
+          if (wrapper) {
+                  const performanceObserver =
+    "PerformanceObserver" in window
+      ? new PerformanceObserver(
+          (entries) => {
+            entries.getEntries().forEach(
+              (entry) => {
+                if (
+                  entry.name ===
+                  "first-contentful-paint"
+                ) {
+                  body.classList.add(
+                    "first-paint-complete"
+                  );
+                }
+              }
+            );
+          }
+        )
+      : null;
+
+  if (performanceObserver) {
+    try {
+      performanceObserver.observe({
+        type: "paint",
+        buffered: true
+      });
+    } catch (error) {
+      console.warn(
+        "Paint observer unavailable.",
+        error
+      );
+    }
+  }
+
+  const interactiveCards =
+    document.querySelectorAll(
+      ".interactive-card"
+    );
+
+  interactiveCards.forEach(
+    (card) => {
+      card.addEventListener(
+        "click",
+        () => {
+          interactiveCards.forEach(
+            (otherCard) => {
+              if (
+                otherCard !== card
+              ) {
+                otherCard.classList.remove(
+                  "selected"
+                );
+              }
+            }
+          );
+
+          card.classList.toggle(
+            "selected"
+          );
+        }
+      );
+    }
+  );
+
+  const featureItems =
+    document.querySelectorAll(
+      ".feature-item"
+    );
+
+  featureItems.forEach(
+    (item, index) => {
+      item.style.setProperty(
+        "--feature-index",
+        String(index)
+      );
+
+      item.addEventListener(
+        "pointerenter",
+        () => {
+          item.classList.add(
+            "feature-highlight"
+          );
+        }
+      );
+
+      item.addEventListener(
+        "pointerleave",
+        () => {
+          item.classList.remove(
+            "feature-highlight"
+          );
+        }
+      );
+    }
+  );
+
+  const revealGroups =
+    document.querySelectorAll(
+      "[data-reveal-group]"
+    );
+
+  revealGroups.forEach(
+    (group) => {
+      const children =
+        group.querySelectorAll(
+          "[data-reveal-child]"
+        );
+
+      children.forEach(
+        (child, index) => {
+          child.style.transitionDelay =
+            `${index * 75}ms`;
+        }
+      );
+    }
+  );
+
+  const revealGroupObserver =
+    new IntersectionObserver(
+      (entries) => {
+        entries.forEach(
+          (entry) => {
+            if (
+              !entry.isIntersecting
+            ) {
+              return;
+            }
+
+            entry.target.classList.add(
+              "group-visible"
+            );
+
+            revealGroupObserver.unobserve(
+              entry.target
+            );
+          }
+        );
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+  revealGroups.forEach(
+    (group) => {
+      revealGroupObserver.observe(
+        group
+      );
+    }
+  );
+
+  const scrollButtons =
+    document.querySelectorAll(
+      "[data-scroll]"
+    );
+
+  scrollButtons.forEach(
+    (button) => {
+      button.addEventListener(
+        "click",
+        () => {
+          const targetId =
+            button.getAttribute(
+              "data-scroll"
+            );
+
+          if (!targetId) {
+            return;
+          }
+
+          const target =
+            document.getElementById(
+              targetId
+            );
+
+          if (!target) {
+            return;
+          }
+
+          const headerSize =
+            header
+              ? header.getBoundingClientRect()
+                  .height
+              : 0;
+
+          const position =
+            target.getBoundingClientRect()
+                .top +
+            window.scrollY -
+            headerSize;
+
+          window.scrollTo({
+            top: position,
+            behavior: "smooth"
+          });
+        }
+      );
+    }
+  );
+
+  const heroButtons =
+    document.querySelectorAll(
+      ".hero-button"
+    );
+
+  heroButtons.forEach(
+    (button) => {
+      button.addEventListener(
+        "pointerenter",
+        () => {
+          button.classList.add(
+            "hero-button-active"
+          );
+        }
+      );
+
+      button.addEventListener(
+        "pointerleave",
+        () => {
+          button.classList.remove(
+            "hero-button-active"
+          );
+        }
+      );
+    }
+  );
+
+  const sectionNumbers =
+    document.querySelectorAll(
+      "[data-section-number]"
+    );
+
+  sectionNumbers.forEach(
+    (number) => {
+      const value =
+        number.getAttribute(
+          "data-section-number"
+        );
+
+      if (!value) {
+        return;
+      }
+
+      number.textContent =
+        value.padStart(2, "0");
+    }
+  );
+
+  const animatedBorders =
+    document.querySelectorAll(
+      ".animated-border"
+    );
+
+  animatedBorders.forEach(
+    (border, index) => {
+      border.style.setProperty(
+        "--border-delay",
+        `${index * 0.35}s`
+      );
+    }
+  );
+
+  const rotatingElements =
+    document.querySelectorAll(
+      "[data-rotate]"
+    );
+
+  rotatingElements.forEach(
+    (element) => {
+      let rotation =
+        Number(
+          element.getAttribute(
+            "data-rotate"
+          )
+        ) || 0;
+
+      const rotationSpeed =
+        Number(
+          element.getAttribute(
+            "data-rotate-speed"
+          )
+        ) || 0.08;
+
+      const animateRotation =
+        () => {
+          rotation +=
+            rotationSpeed;
+
+          element.style.setProperty(
+            "--rotation",
+            `${rotation}deg`
+          );
+
+          requestAnimationFrame(
+            animateRotation
+          );
+        };
+
+      if (
+        !window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches
+      ) {
+        animateRotation();
+      }
+    }
+  );
+
+  const progressBars =
+    document.querySelectorAll(
+      "[data-progress]"
+    );
+
+  const progressObserver =
+    new IntersectionObserver(
+      (entries) => {
+        entries.forEach(
+          (entry) => {
+            if (
+              !entry.isIntersecting
+            ) {
+              return;
+            }
+
+            const bar =
+              entry.target;
+
+            const value =
+              Number(
+                bar.getAttribute(
+                  "data-progress"
+                )
+              ) || 0;
+
+            const safeValue =
+              Math.max(
+                0,
+                Math.min(
+                  100,
+                  value
+                )
+              );
+
+            bar.style.setProperty(
+              "--progress",
+              `${safeValue}%`
+            );
+
+            bar.classList.add(
+              "progress-active"
+            );
+
+            progressObserver.unobserve(
+              bar
+            );
+          }
+        );
+      },
+      {
+        threshold: 0.3
+      }
+    );
+
+  progressBars.forEach(
+    (bar) => {
+      progressObserver.observe(
+        bar
+      );
+    }
+  );
+
+  const counters =
+    document.querySelectorAll(
+      "[data-counter]"
+    );
+
+  const counterObserver =
+    new IntersectionObserver(
+      (entries) => {
+                  const accessibilityButtons =
+    document.querySelectorAll(
+      "[data-accessibility]"
+    );
+
+  accessibilityButtons.forEach(
+    (button) => {
+      button.addEventListener(
+        "click",
+        () => {
+          const action =
+            button.getAttribute(
+              "data-accessibility"
+            );
+
+          if (
+            action ===
+            "increase"
+          ) {
+            root.classList.add(
+              "large-interface"
+            );
+          }
+
+          if (
+            action ===
+            "decrease"
+          ) {
+            root.classList.remove(
+              "large-interface"
+            );
+          }
+
+          if (
+            action ===
+            "reset"
+          ) {
+            root.classList.remove(
+              "large-interface"
+            );
+          }
+        }
+      );
+    }
+  );
+
+  const closeButtons =
+    document.querySelectorAll(
+      "[data-close]"
+    );
+
+  closeButtons.forEach(
+    (button) => {
+      button.addEventListener(
+        "click",
+        () => {
+          const targetId =
+            button.getAttribute(
+              "data-close"
+            );
+
+          if (!targetId) {
+            return;
+          }
+
+          const target =
+            document.getElementById(
+              targetId
+            );
+
+          if (target) {
+            target.classList.remove(
+              "is-open"
+            );
+          }
+        }
+      );
+    }
+  );
+
+  const modalTriggers =
+    document.querySelectorAll(
+      "[data-modal]"
+    );
+
+  const modalCloseButtons =
+    document.querySelectorAll(
+      ".modal-close"
+    );
+
+  const closeAllModals =
+    () => {
+      document
+        .querySelectorAll(
+          ".modal.is-open"
+        )
+        .forEach(
+          (modal) => {
+            modal.classList.remove(
+              "is-open"
+            );
+
+            modal.setAttribute(
+              "aria-hidden",
+              "true"
+            );
+          }
+        );
+
+      body.classList.remove(
+        "modal-open"
+      );
+    };
+
+  modalTriggers.forEach(
+    (trigger) => {
+      trigger.addEventListener(
+        "click",
+        () => {
+          const modalId =
+            trigger.getAttribute(
+              "data-modal"
+            );
+
+          if (!modalId) {
+            return;
+          }
+
+          const modal =
+            document.getElementById(
+              modalId
+            );
+
+          if (!modal) {
+            return;
+          }
+
+          closeAllModals();
+
+          modal.classList.add(
+            "is-open"
+          );
+
+          modal.setAttribute(
+            "aria-hidden",
+            "false"
+          );
+
+          body.classList.add(
+            "modal-open"
+          );
+        }
+      );
+    }
+  );
+
+  modalCloseButtons.forEach(
+    (button) => {
+      button.addEventListener(
+        "click",
+        closeAllModals
+      );
+    }
+  );
+
+  document.addEventListener(
+    "click",
+    (event) => {
+      const modal =
+        event.target.closest(
+          ".modal.is-open"
+        );
+
+      if (
+        !modal ||
+        event.target.closest(
+          ".modal-panel"
+        )
+      ) {
+        return;
+      }
+
+      closeAllModals();
+    }
+  );
+
+  const faqQuestions =
+    document.querySelectorAll(
+      ".faq-question"
+    );
+
+  faqQuestions.forEach(
+    (question) => {
+      question.addEventListener(
+        "click",
+        () => {
+          const item =
+            question.closest(
+              ".faq-item"
+            );
+
+          if (!item) {
+            return;
+          }
+
+          const isOpen =
+            item.classList.contains(
+              "is-open"
+            );
+
+          document
+            .querySelectorAll(
+              ".faq-item.is-open"
+            )
+            .forEach(
+              (openItem) => {
+                openItem.classList.remove(
+                  "is-open"
+                );
+
+                const openQuestion =
+                  openItem.querySelector(
+                    ".faq-question"
+                  );
+
+                if (
+                  openQuestion
+                ) {
+                  openQuestion.setAttribute(
+                    "aria-expanded",
+                    "false"
+                  );
+                }
+              }
+            );
+
+          if (!
+                 const finalNavigationCheck =
+    () => {
+      const requiredSections = [
+        "home",
+        "products",
+        "vision",
+        "contact"
+      ];
+
+      const availableSections =
+        requiredSections.filter(
+          (id) =>
+            document.getElementById(
+              id
+            )
+        );
+
+      root.style.setProperty(
+        "--navigation-count",
+        String(
+          availableSections.length
+        )
+      );
+
+      if (
+        availableSections.length ===
+        requiredSections.length
+      ) {
+        body.classList.add(
+          "navigation-ready"
+        );
+      }
+    };
+
+  finalNavigationCheck();
+
+  const sectionProgress =
+    document.querySelector(
+      ".section-progress"
+    );
+
+  const updateSectionProgress =
+    () => {
+      if (!sectionProgress) {
+        return;
+      }
+
+      const documentHeight =
+        document.documentElement
+          .scrollHeight -
+        window.innerHeight;
+
+      if (
+        documentHeight <=
+        0
+      ) {
+        sectionProgress.style.width =
+          "0%";
+
+        return;
+      }
+
+      const progress =
+        Math.min(
+          100,
+          Math.max(
+            0,
+            (window.scrollY /
+              documentHeight) *
+              100
+          )
+        );
+
+      sectionProgress.style.width =
+        `${progress}%`;
+    };
+
+  window.addEventListener(
+    "scroll",
+    updateSectionProgress,
+    {
+      passive: true
+    }
+  );
+
+  window.addEventListener(
+    "resize",
+    updateSectionProgress,
+    {
+      passive: true
+    }
+  );
+
+  updateSectionProgress();
+
+  const backToTop =
+    document.querySelector(
+      "[data-back-to-top]"
+    );
+
+  if (backToTop) {
+    const updateBackToTop =
+      () => {
+        backToTop.classList.toggle(
+          "is-visible",
+          window.scrollY >
+            window.innerHeight *
+              0.65
+        );
+      };
+
+    window.addEventListener(
+      "scroll",
+      updateBackToTop,
+      {
+        passive: true
+      }
+    );
+
+    backToTop.addEventListener(
+      "click",
+      () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      }
+    );
+
+    updateBackToTop();
+  }
+
+  const magneticElements =
+    document.querySelectorAll(
+      "[data-magnetic]"
+    );
+
+  magneticElements.forEach(
+    (element) => {
+      const strength =
+        Number(
+          element.getAttribute(
+            "data-magnetic"
+          )
+        ) || 0.18;
+
+      element.addEventListener(
+        "pointermove",
+        (event) => {
+          if (
+            !window.matchMedia(
+              "(pointer:fine)"
+            ).matches
+          ) {
+            return;
+          }
+
+          const rect =
+            element.getBoundingClientRect();
+
+          const centerX =
+            rect.left +
+            rect.width / 2;
+
+          const centerY =
+            rect.top +
+            rect.height / 2;
+
+          const offsetX =
+            (event.clientX -
+              centerX) *
+            strength;
+
+          const offsetY =
+            (event.clientY -
+              centerY) *
+            strength;
+
+          element.style.transform =
+            `translate3d(${offsetX}px, ${offsetY}px, 0)`;
+        },
+        {
+          passive: true
+        }
+      );
+
+      element.addEventListener(
+        "pointerleave",
+        () => {
+          element.style.transform =
+            "";
+        }
+      );
+    }
+  );
+
+  const tiltElements =
+    document.querySelectorAll(
+      "[data-tilt]"
+    );
+
+  tiltElements.forEach(
+    (element) => {
+      element.addEventListener(
+        "pointermove",
+        (event) => {
+          if (
+            !window.matchMedia(
+              "(pointer:fine)"
+            ).matches
+          ) {
+            return;
+          }
+
+          const rect =
+            element.getBoundingClientRect();
+
+          const x =
+            event.clientX -
+            rect.left;
+
+          const y =
+            event.clientY -
+            rect.top;
+
+          const percentX =
+            (x /
+              rect.width -
+              0.5) *
+            2;
+
+          const percentY =
+            (y /
+              rect.height -
+              0.5) *
+            2;
+
+          const rotateX =
+            percentY *
+            -3;
+
+          const rotateY =
+            percentX *
+            3;
+
+          element.style.transform =
+            `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(0)`;
+        },
+        {
+          passive: true
+        }
+      );
+
+      element.addEventListener(
+        "pointerleave",
+        () => {
+          element.style.transform =
+            "";
+        }
+      );
+    }
+  );
+
+  const spotlightSections =
+    document.querySelectorAll(
+      "[data-spotlight]"
+    );
+
+  spotlightSections.forEach(
+    (section) => {
+      section.addEventListener(
+        "pointermove",
+        (event) => {
+          const rect =
+            section.getBoundingClientRect();
+
+          const x =
+            event.clientX -
+            rect.left;
+
+          const y =
+            event.clientY -
+            rect.top;
+
+          section.style.setProperty(
+            "--spotlight-x",
+            `${x}px`
+          );
+
+          section.style.setProperty(
+            "--spotlight-y",
+            `${y}px`
+          );
+        },
+        {
+          passive: true
+        }
+      );
+    }
+  );
+
+  const animatedText =
+    document.querySelectorAll(
+      "[data-text-reveal]"
+    );
+
+  if (
+    animatedText.length
+  ) {
+    animatedText.forEach(
+      (text) => {
+        const original =
+          text.textContent
+            .trim();
+
+        if (!original) {
+          return;
+        }
+
+        const words =
+          original.split(
+            /\s+/
+          );
+
+        text.innerHTML =
+          words
+            .map(
+              (
+                word,
+                index
+              ) =>
+                `<span class="text-word" style="--word-index:${index}">${word}</span>`
+            )
+            .join(" ");
+      }
+    );
+
+    const textObserver =
+      new IntersectionObserver(
+        (entries) => {
+          entries.forEach(
+            (entry) => {
+              if (
+                !entry.isIntersecting
+              ) {
+                return;
+              }
+
+              entry.target.classList.add(
+                "text-reveal-active"
+              );
+
+              textObserver.unobserve(
+                entry.target
+              );
+            }
+          );
+        },
+        {
+          threshold: 0.35
+        }
+      );
+
+    animatedText.forEach(
+      (text) => {
+        textObserver.observe(
+          text
+        );
+      }
+    );
+  }
+
+  const imageRevealElements =
+    document.querySelectorAll(
+      "[data-image-reveal]"
+    );
+
+  if (
+    imageRevealElements.length
+  ) {
+    const imageObserver =
+      new IntersectionObserver(
+        (entries) => {
+          entries.forEach(
+            (entry) => {
+              if (
+                !entry.isIntersecting
+              ) {
+                return;
+              }
+
+              entry.target.classList.add(
+                "image-revealed"
+              );
+
+              imageObserver.unobserve(
+                entry.target
+              );
+            }
+          );
+        },
+        {
+          threshold: 0.18
+        }
+      );
+
+    imageRevealElements.forEach(
+      (image) => {
+        imageObserver.observe(
+          image
+        );
+      }
+    );
+  }
+
+  const orbitElements =
+    document.querySelectorAll(
+      "[data-orbit]"
+    );
+
+  orbitElements.forEach(
+    (orbit) => {
+      let angle = 0;
+
+      const speed =
+        Number(
+          orbit.getAttribute(
+            "data-orbit-speed"
+          )
+        ) || 0.15;
+
+      const radius =
+        Number(
+          orbit.getAttribute(
+            "data-orbit-radius"
+          )
+        ) || 16;
+
+      const animateOrbit =
+        () => {
+          angle +=
+            speed;
+
+          const radians =
+            (angle *
+              Math.PI) /
+            180;
+
+          const x =
+            Math.cos(
+              radians
+            ) * radius;
+
+          const y =
+            Math.sin(
+              radians
+            ) * radius;
+
+          orbit.style.setProperty(
+            "--orbit-x",
+            `${x}px`
+          );
+
+          orbit.style.setProperty(
+            "--orbit-y",
+            `${y}px`
+          );
+
+          requestAnimationFrame(
+            animateOrbit
+          );
+        };
+
+      if (
+        !window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches
+      ) {
+        animateOrbit();
+      }
+    }
+  );
+
+  const signalBars =
+    document.querySelectorAll(
+      "[data-signal]"
+    );
+
+  signalBars.forEach(
+    (bar) => {
+      const bars =
+        bar.querySelectorAll(
+          ".signal-bar"
+        );
+
+      bars.forEach(
+        (signalBar, index) => {
+          signalBar.style.setProperty(
+            "--signal-delay",
+            `${index * 80}ms`
+          );
+        }
+      );
+
+      const signalObserver =
+        new IntersectionObserver(
+          (entries) => {
+            entries.forEach(
+              (entry) => {
+                if (
+                  !entry.isIntersecting
+                ) {
+                  return;
+                }
+
+                entry.target.classList.add(
+                  "signal-active"
+                );
+
+                signalObserver.unobserve(
+                  entry.target
+                );
+              }
+            );
+          },
+          {
+            threshold: 0.3
+          }
+        );
+
+      signalObserver.observe(
+        bar
+      );
+    }
+  );
+
+  const productCards =
+    document.querySelectorAll(
+      ".product-card"
+    );
+
+  productCards.forEach(
+    (card, index) => {
+      card.style.setProperty(
+        "--card-index",
+        String(index)
+      );
+
+      card.addEventListener(
+        "pointerenter",
+        () => {
+          productCards.forEach(
+            (otherCard) => {
+              if (
+                otherCard !== card
+              ) {
+                otherCard.classList.add(
+                  "product-dimmed"
+                );
+              }
+            }
+          );
+
+          card.classList.add(
+            "product-focused"
+          );
+        }
+      );
+
+      card.addEventListener(
+        "pointerleave",
+        () => {
+          productCards.forEach(
+            (otherCard) => {
+              otherCard.classList.remove(
+                "product-dimmed"
+              );
+            }
+          );
+
+          card.classList.remove(
+            "product-focused"
+          );
+        }
+      );
+    }
+  );
+
+  const auraRingCard =
+    document.querySelector(
+      "[data-product='aura-ring']"
+    );
+
+  if (auraRingCard) {
+    auraRingCard.addEventListener(
+      "click",
+      () => {
+        auraRingCard.classList.toggle(
+          "aura-active"
+        );
+      }
+    );
+  }
+
+  const mysteryCard =
+    document.querySelector(
+      "[data-product='mystery']"
+    );
+
+  if (mysteryCard) {
+    mysteryCard.addEventListener(
+      "click",
+      () => {
+        mysteryCard.classList.toggle(
+          "mystery-active"
+        );
+      }
+    );
+  }
+
+  const productScrollHint =
+    document.querySelector(
+      ".product-scroll-hint"
+    );
+
+  if (
+    productScrollHint &&
+    carousel
+  ) {
+    productScrollHint.addEventListener(
+      "click",
+      () => {
+        scrollToCard(1);
+      }
+    );
+  }
+
+  const sectionAnchors =
+    document.querySelectorAll(
+      "a[href^='#']"
+    );
+
+  sectionAnchors.forEach(
+    (anchor) => {
+      anchor.addEventListener(
+        "click",
+        (event) => {
+          const href =
+            anchor.getAttribute(
+              "href"
+            );
+
+          if (
+            !href ||
+            href === "#"
+          ) {
+            return;
+          }
+
+          const target =
+            document.querySelector(
+              href
+            );
+
+          if (!target) {
+            return;
+          }
+
+          event.preventDefault();
+
+          const offset =
+            header
+              ? header.getBoundingClientRect()
+                  .height
+              : 0;
+
+          window.scrollTo({
+            top:
+              target.offsetTop -
+              offset,
+            behavior:
+              "smooth"
+          });
+
+          history.replaceState(
+            null,
+            "",
+            href
+          );
+        }
+      );
+    }
+  );
+
+  const externalLinks =
+    document.querySelectorAll(
+      "a[target='_blank']"
+    );
+
+  externalLinks.forEach(
+    (link) => {
+      link.setAttribute(
+        "rel",
+        "noopener noreferrer"
+      );
+    }
+  );
+
+  const lazyImages =
+    document.querySelectorAll(
+      "img[data-src]"
+    );
+
+  if (
+    "IntersectionObserver" in
+    window
+  ) {
+    const imageObserver =
+      new IntersectionObserver(
+        (entries) => {
+          entries.forEach(
+            (entry) => {
+              if (
+                !entry.isIntersecting
+              ) {
+                return;
+              }
+
+              const image =
+                entry.target;
+
+              const source =
+                image.getAttribute(
+                  "data-src"
+                );
+
+              if (source) {
+                image.src =
+                  source;
+              }
+
+              image.removeAttribute(
+                "data-src"
+              );
+
+              image.classList.add(
+                "image-loaded"
+              );
+
+              imageObserver.unobserve(
+                image
+              );
+            }
+          );
+        },
+        {
+          rootMargin:
+            "300px 0px"
+        }
+      );
+
+    lazyImages.forEach(
+      (image) => {
+        imageObserver.observe(
+          image
+        );
+      }
+    );
+  } else {
+    lazyImages.forEach(
+      (image) => {
+        const source =
+          image.getAttribute(
+            "data-src"
+          );
+
+        if (source) {
+          image.src =
+            source;
+        }
+
+        image.removeAttribute(
+          "data-src"
+        );
+      }
+    );
+  }
+
+  const imageFallbacks =
+    document.querySelectorAll(
+      "img"
+    );
+
+  imageFallbacks.forEach(
+    (image) => {
+      image.addEventListener(
+        "error",
+        () => {
+          image.classList.add(
+            "image-error"
+          );
+
+          image.setAttribute(
+            "data-image-error",
+            "true"
+          );
+        }
+      );
+
+      image.addEventListener(
+        "load",
+        () => {
+          image.classList.remove(
+            "image-error"
+          );
+
+          image.classList.add(
+            "image-success"
+          );
+        }
+      );
+    }
+  );
+
+  const currentYear =
+    new Date().getFullYear();
+
+  document
+    .querySelectorAll(
+      ".current-year"
+    )
+    .forEach(
+      (element) => {
+        element.textContent =
+          String(
+            currentYear
+          );
+      }
+    );
+
+  root.style.setProperty(
+    "--zexvon-stage",
+    "09"
+  );
+          const scrollVelocity =
+    {
+      current: 0,
+      target: 0
+    };
+
+  let previousScrollY =
+    window.scrollY;
+
+  const updateScrollVelocity =
+    () => {
+      const currentScrollY =
+        window.scrollY;
+
+      scrollVelocity.target =
+        currentScrollY -
+        previousScrollY;
+
+      previousScrollY =
+        currentScrollY;
+    };
+
+  window.addEventListener(
+    "scroll",
+    updateScrollVelocity,
+    {
+      passive: true
+    }
+  );
+
+  const smoothScrollVelocity =
+    () => {
+      scrollVelocity.current +=
+        (scrollVelocity.target -
+          scrollVelocity.current) *
+        0.08;
+
+      scrollVelocity.target *=
+        0.82;
+
+      root.style.setProperty(
+        "--scroll-velocity",
+        scrollVelocity.current.toFixed(
+          3
+        )
+      );
+
+      requestAnimationFrame(
+        smoothScrollVelocity
+      );
+    };
+
+  if (
+    !window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches
+  ) {
+    smoothScrollVelocity();
+  }
+
+  const parallaxElements =
+    document.querySelectorAll(
+      "[data-parallax]"
+    );
+
+  const updateParallax =
+    () => {
+      const viewportHeight =
+        window.innerHeight;
+
+      parallaxElements.forEach(
+        (element) => {
+          const rect =
+            element.getBoundingClientRect();
+
+          if (
+            rect.bottom <
+              -100 ||
+            rect.top >
+              viewportHeight +
+                100
+          ) {
+            return;
+          }
+
+          const speed =
+            Number(
+              element.getAttribute(
+                "data-parallax"
+              )
+            ) || 0.08;
+
+          const center =
+            viewportHeight /
+            2;
+
+          const elementCenter =
+            rect.top +
+            rect.height / 2;
+
+          const offset =
+            (center -
+              elementCenter) *
+            speed;
+
+          element.style.setProperty(
+            "--parallax-offset",
+            `${offset}px`
+          );
+        }
+      );
+    };
+
+  window.addEventListener(
+    "scroll",
+    updateParallax,
+    {
+      passive: true
+    }
+  );
+
+  window.addEventListener(
+    "resize",
+    updateParallax,
+    {
+      passive: true
+    }
+  );
+
+  updateParallax();
+
+  const glowingParticles =
+    document.querySelectorAll(
+      "[data-glowing-particle]"
+    );
+
+  glowingParticles.forEach(
+    (particle, index) => {
+      const delay =
+        Number(
+          particle.getAttribute(
+            "data-glow-delay"
+          )
+        ) ||
+        index *
+          0.18;
+
+      const duration =
+        Number(
+          particle.getAttribute(
+            "data-glow-duration"
+          )
+        ) ||
+        2.8;
+
+      particle.style.setProperty(
+        "--glow-delay",
+        `${delay}s`
+      );
+
+      particle.style.setProperty(
+        "--glow-duration",
+        `${duration}s`
+      );
+    }
+  );
+
+  const animatedNumbers =
+    document.querySelectorAll(
+      "[data-animate-number]"
+    );
+
+  const animateNumber =
+    (
+      element,
+      target,
+      duration
+    ) => {
+      const startTime =
+        performance.now();
+
+      const update =
+        (time) => {
+          const elapsed =
+            time -
+            startTime;
+
+          const progress =
+            Math.min(
+              1,
+              elapsed /
+                duration
+            );
+
+          const eased =
+            1 -
+            Math.pow(
+              1 - progress,
+              3
+            );
+
+          const value =
+            target *
+            eased;
+
+          element.textContent =
+            Number.isInteger(
+              target
+            )
+              ? Math.round(
+                  value
+                ).toLocaleString(
+                  "en-US"
+                )
+              : value.toFixed(
+                  1
+                );
+
+          if (
+            progress <
+            1
+          ) {
+            requestAnimationFrame(
+              update
+            );
+          }
+        };
+
+      requestAnimationFrame(
+        update
+      );
+    };
+
+  if (
+    animatedNumbers.length
+  ) {
+    const numberObserver =
+      new IntersectionObserver(
+        (entries) => {
+          entries.forEach(
+            (entry) => {
+              if (
+                !entry.isIntersecting
+              ) {
+                return;
+              }
+
+              const element =
+                entry.target;
+
+              const target =
+                Number(
+                  element.getAttribute(
+                    "data-animate-number"
+                  )
+                );
+
+              const duration =
+                Number(
+                  element.getAttribute(
+                    "data-number-duration"
+                  )
+                ) ||
+                1600;
+
+              if (
+                Number.isFinite(
+                  target
+                )
+              ) {
+                animateNumber(
+                  element,
+                  target,
+                  duration
+                );
+              }
+
+              numberObserver.unobserve(
+                element
+              );
+            }
+          );
+        },
+        {
+          threshold: 0.45
+        }
+      );
+
+    animatedNumbers.forEach(
+      (element) => {
+        numberObserver.observe(
+          element
+        );
+      }
+    );
+  }
+
+  const glowLinks =
+    document.querySelectorAll(
+      "[data-glow-link]"
+    );
+
+  glowLinks.forEach(
+    (link) => {
+      link.addEventListener(
+        "pointermove",
+        (event) => {
+          const rect =
+            link.getBoundingClientRect();
+
+          const x =
+            event.clientX -
+            rect.left;
+
+          const y =
+            event.clientY -
+            rect.top;
+
+          link.style.setProperty(
+            "--link-x",
+            `${x}px`
+          );
+
+          link.style.setProperty(
+            "--link-y",
+            `${y}px`
+          );
+        },
+        {
+          passive: true
+        }
+      );
+
+      link.addEventListener(
+        "pointerenter",
+        () => {
+          link.classList.add(
+            "link-glowing"
+          );
+        }
+      );
+
+      link.addEventListener(
+        "pointerleave",
+        () => {
+          link.classList.remove(
+            "link-glowing"
+          );
+        }
+      );
+    }
+  );
+
+  const commandPalette =
+    document.querySelector(
+      ".command-palette"
+    );
+
+  const commandPaletteInput =
+    commandPalette
+      ? commandPalette.querySelector(
+         ("input")
+        )
+      : null;
+
+  const commandPaletteItems =
+    commandPalette
+      ? commandPalette.querySelectorAll(
+          "[data-command-target]"
+        )
+      : [];
+
+  const openCommandPalette =
+    () => {
+      if (
+        !commandPalette
+      ) {
+        return;
+      }
+
+      commandPalette.classList.add(
+        "is-open"
+      );
+
+      commandPalette.setAttribute(
+        "aria-hidden",
+        "false"
+      );
+
+      body.classList.add(
+        "command-palette-open"
+      );
+
+      if (
+        commandPaletteInput
+              const ambientGlow =
+    document.querySelector(
+      ".ambient-glow"
+    );
+
+  if (ambientGlow) {
+    let glowX = 50;
+    let glowY = 50;
+
+    const moveGlow =
+      (event) => {
+        const rect =
+          ambientGlow.getBoundingClientRect();
+
+        glowX =
+          ((event.clientX -
+            rect.left) /
+            rect.width) *
+          100;
+
+        glowY =
+          ((event.clientY -
+            rect.top) /
+            rect.height) *
+          100;
+
+        ambientGlow.style.setProperty(
+          "--glow-x",
+          `${glowX}%`
+        );
+
+        ambientGlow.style.setProperty(
+          "--glow-y",
+          `${glowY}%`
+        );
+      };
+
+    window.addEventListener(
+      "pointermove",
+      moveGlow,
+      {
+        passive: true
+      }
+    );
+  }
+
+  const heroVisual =
+    document.querySelector(
+      ".hero-visual"
+    );
+
+  if (heroVisual) {
+    heroVisual.addEventListener(
+      "pointermove",
+      (event) => {
+        if (
+          !window.matchMedia(
+            "(pointer:fine)"
+          ).matches
+        ) {
+          return;
+        }
+
+        const rect =
+          heroVisual.getBoundingClientRect();
+
+        const x =
+          (event.clientX -
+            rect.left) /
+          rect.width -
+          0.5;
+
+        const y =
+          (event.clientY -
+            rect.top) /
+          rect.height -
+          0.5;
+
+        heroVisual.style.setProperty(
+          "--hero-move-x",
+          `${x * 18}px`
+        );
+
+        heroVisual.style.setProperty(
+          "--hero-move-y",
+          `${y * 18}px`
+        );
+
+        heroVisual.style.setProperty(
+          "--hero-rotate-x",
+          `${y * -3}deg`
+        );
+
+        heroVisual.style.setProperty(
+          "--hero-rotate-y",
+          `${x * 3}deg`
+        );
+      },
+      {
+        passive: true
+      }
+    );
+
+    heroVisual.addEventListener(
+      "pointerleave",
+      () => {
+        heroVisual.style.setProperty(
+          "--hero-move-x",
+          "0px"
+        );
+
+        heroVisual.style.setProperty(
+          "--hero-move-y",
+          "0px"
+        );
+
+        heroVisual.style.setProperty(
+          "--hero-rotate-x",
+          "0deg"
+        );
+
+        heroVisual.style.setProperty(
+          "--hero-rotate-y",
+          "0deg"
+        );
+      }
+    );
+  }
+
+  const logoElements =
+    document.querySelectorAll(
+      ".zexvon-logo"
+    );
+
+  logoElements.forEach(
+    (logo) => {
+      logo.addEventListener(
+        "pointerenter",
+        () => {
+          logo.classList.add(
+            "logo-active"
+          );
+        }
+      );
+
+      logo.addEventListener(
+        "pointerleave",
+        () => {
+          logo.classList.remove(
+            "logo-active"
+          );
+        }
+      );
+
+      logo.addEventListener(
+        "click",
+        () => {
+          window.scrollTo({
+            top: 0,
+            behavior:
+              "smooth"
+          });
+        }
+      );
+    }
+  );
+
+  const glowTitles =
+    document.querySelectorAll(
+      ".glow-title"
+    );
+
+  glowTitles.forEach(
+    (title) => {
+      title.addEventListener(
+        "pointerenter",
+        () => {
+          title.classList.add(
+            "title-glow-active"
+          );
+        }
+      );
+
+      title.addEventListener(
+        "pointerleave",
+        () => {
+          title.classList.remove(
+            "title-glow-active"
+          );
+        }
+      );
+    }
+  );
+
+  const visionCards =
+    document.querySelectorAll(
+      ".vision-card"
+    );
+
+  visionCards.forEach(
+    (card, index) => {
+      card.style.setProperty(
+        "--vision-index",
+        String(index)
+      );
+
+      card.addEventListener(
+        "pointerenter",
+        () => {
+          visionCards.forEach(
+            (otherCard) => {
+              if (
+                otherCard !== card
+              ) {
+                otherCard.classList.add(
+                  "vision-dimmed"
+                );
+              }
+            }
+          );
+
+          card.classList.add(
+            "vision-active"
+          );
+        }
+      );
+
+      card.addEventListener(
+        "pointerleave",
+        () => {
+          visionCards.forEach(
+            (otherCard) => {
+              otherCard.classList.remove(
+                "vision-dimmed"
+              );
+            }
+          );
+
+          card.classList.remove(
+            "vision-active"
+          );
+        }
+      );
+    }
+  );
+
+  const contactInputs =
+    document.querySelectorAll(
+      ".contact-form input, .contact-form textarea"
+    );
+
+  contactInputs.forEach(
+    (input) => {
+      input.addEventListener(
+        "focus",
+        () => {
+          const field =
+            input.closest(
+              ".field"
+            );
+
+          if (field) {
+            field.classList.add(
+              "field-focused"
+            );
+          }
+        }
+      );
+
+      input.addEventListener(
+        "blur",
+        () => {
+          const field =
+            input.closest(
+              ".field"
+            );
+
+          if (field) {
+            field.classList.remove(
+              "field-focused"
+            );
+          }
+        }
+      );
+    }
+  );
+
+  const contactForm =
+    document.querySelector(
+      ".contact-form"
+    );
+
+  if (contactForm) {
+    contactForm.addEventListener(
+      "submit",
+      (event) => {
+        event.preventDefault();
+
+        const formData =
+          new FormData(
+            contactForm
+          );
+
+        const name =
+          formData.get(
+            "name"
+          );
+
+        const email =
+          formData.get(
+            "email"
+          );
+
+        if (
+          !name ||
+          !email
+        ) {
+          showToast(
+            "Please complete the required fields.",
+            "error"
+          );
+
+          return;
+        }
+
+        contactForm.classList.add(
+          "form-submitting"
+        );
+
+        window.setTimeout(
+          () => {
+            contactForm.classList.remove(
+              "form-submitting"
+            );
+
+            contactForm.classList.add(
+              "form-success"
+            );
+
+            showToast(
+              "Message received. ZEXVON will be in touch.",
+              "success"
+            );
+
+            contactForm.reset();
+
+            window.setTimeout(
+              () => {
+                contactForm.classList.remove(
+                  "form-success"
+                );
+              },
+              4000
+            );
+          },
+          900
+        );
+      }
+    );
+  }
+
+  const newsletterForm =
+    document.querySelector(
+      ".newsletter-form"
+    );
+
+  if (newsletterForm) {
+    newsletterForm.addEventListener(
+      "submit",
+      (event) => {
+        event.preventDefault();
+
+        const input =
+          newsletterForm.querySelector(
+            "input[type='email']"
+          );
+
+        if (
+          !input ||
+          !input.value
+        ) {
+          showToast(
+            "Enter a valid email address.",
+            "error"
+          );
+
+          return;
+        }
+
+        const emailPattern =
+          /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (
+          !emailPattern.test(
+            input.value
+          )
+        ) {
+          showToast(
+            "Enter a valid email address.",
+            "error"
+          );
+
+          return;
+        }
+
+        newsletterForm.classList.add(
+          "submitted"
+        );
+
+        showToast(
+          "You're on the ZEXVON list.",
+          "success"
+        );
+
+        input.value = "";
+
+        window.setTimeout(
+          () => {
+            newsletterForm.classList.remove(
+              "submitted"
+            );
+          },
+          2500
+        );
+      }
+    );
+  }
+
+  const floatingElements =
+    document.querySelectorAll(
+      "[data-float]"
+    );
+
+  floatingElements.forEach(
+    (element, index) => {
+      const amplitude =
+        Number(
+          element.getAttribute(
+            "data-float"
+          )
+        ) || 8;
+
+      const speed =
+        Number(
+          element.getAttribute(
+            "data-float-speed"
+          )
+        ) || 0.001;
+
+      const phase =
+        index *
+        0.7;
+
+      const start =
+        performance.now();
+
+      const animateFloat =
+        (time) => {
+          const elapsed =
+            time -
+            start;
+
+          const offset =
+            Math.sin(
+              elapsed *
+                speed +
+                phase
+            ) *
+            amplitude;
+
+          element.style.setProperty(
+            "--float-y",
+            `${offset}px`
+          );
+
+          requestAnimationFrame(
+            animateFloat
+          );
+        };
+
+      if (
+        !window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches
+      ) {
+        requestAnimationFrame(
+          animateFloat
+        );
+      }
+    }
+  );
+
+  const shimmerElements =
+    document.querySelectorAll(
+      "[data-shimmer]"
+    );
+
+  shimmerElements.forEach(
+    (element, index) => {
+      element.style.setProperty(
+        "--shimmer-index",
+        String(index)
+      );
+
+      element.addEventListener(
+        "pointerenter",
+        () => {
+          element.classList.add(
+            "shimmer-active"
+          );
+        }
+      );
+
+      element.addEventListener(
+        "pointerleave",
+        () => {
+          element.classList.remove(
+            "shimmer-active"
+          );
+        }
+      );
+    }
+  );
+
+  const hoverLines =
+    document.querySelectorAll(
+      ".hover-line"
+    );
+
+  hoverLines.forEach(
+    (line) => {
+      line.addEventListener(
+        "pointerenter",
+        () => {
+          line.classList.add(
+            "hover-line-active"
+          );
+        }
+      );
+
+      line.addEventListener(
+        "pointerleave",
+        () => {
+          line.classList.remove(
+            "hover-line-active"
+          );
+        }
+      );
+    }
+  );
+
+  const statusIndicators =
+    document.querySelectorAll(
+      "[data-status]"
+    );
+
+  statusIndicators.forEach(
+    (indicator) => {
+      const status =
+        indicator.getAttribute(
+          "data-status"
+        );
+
+      indicator.classList.add(
+        status ===
+          "online"
+          ? "status-online"
+          : status ===
+            "warning"
+          ? "status-warning"
+          : "status-idle"
+      );
+    }
+  );
+
+  const timeElements =
+    document.querySelectorAll(
+      "[data-live-time]"
+    );
+
+  const updateLiveTime =
+    () => {
+      const now =
+        new Date();
+
+      timeElements.forEach(
+        (element) => {
+          element.textContent =
+            now.toLocaleTimeString(
+              "en-GB",
+              {
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit",
+                hour12: false
+              }
+            );
+        }
+      );
+    };
+
+  if (
+    timeElements.length
+  ) {
+    updateLiveTime();
+
+    window.setInterval(
+      updateLiveTime,
+      1000
+    );
+  }
+
+  const revealOnScroll =
+    document.querySelectorAll(
+      "[data-scroll-reveal]"
+    );
+
+  if (
+    revealOnScroll.length
+  ) {
+    const revealObserver =
+      new IntersectionObserver(
+        (entries) => {
+          entries.forEach(
+            (entry) => {
+              if (
+                entry.isIntersecting
+              ) {
+                entry.target.classList.add(
+                  "scroll-revealed"
+                );
+
+                revealObserver.unobserve(
+                  entry.target
+                );
+              }
+            }
+          );
+        },
+        {
+          threshold: 0.08,
+          rootMargin:
+            "0px 0px -40px 0px"
+        }
+      );
+
+    revealOnScroll.forEach(
+      (element) => {
+        revealObserver.observe(
+          element
+        );
+      }
+    );
+  }
+
+  const sectionHeaders =
+    document.querySelectorAll(
+      ".section-header"
+    );
+
+  sectionHeaders.forEach(
+    (headerElement) => {
+      headerElement.addEventListener(
+        "pointerenter",
+        () => {
+          headerElement.classList.add(
+            "section-header-active"
+          );
+        }
+      );
+
+      headerElement.addEventListener(
+        "pointerleave",
+        () => {
+          headerElement.classList.remove(
+            "section-header-active"
+          );
+        }
+      );
+    }
+  );
+
+  const footerLinks =
+    document.querySelectorAll(
+      ".site-footer a"
+    );
+
+  footerLinks.forEach(
+    (link) => {
+      link.addEventListener(
+        "pointerenter",
+        () => {
+          link.classList.add(
+            "footer-link-active"
+          );
+        }
+      );
+
+      link.addEventListener(
+        "pointerleave",
+        () => {
+          link.classList.remove(
+            "footer-link-active"
+          );
+        }
+      );
+    }
+  );
+
+  const menuLinks =
+    document.querySelectorAll(
+      ".mobile-menu a"
+    );
+
+  menuLinks.forEach(
+    (link) => {
+      link.addEventListener(
+        "click",
+        () => {
+          if (
+            menu
+          ) {
+            menu.classList.remove(
+              "open"
+            );
+          }
+
+          if (
+            menuToggle
+          ) {
+            menuToggle.classList.remove(
+              "active"
+            );
+
+            menuToggle.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+          }
+
+          body.classList.remove(
+            "menu-open"
+          );
+        }
+      );
+    }
+  );
+
+  root.style.setProperty(
+    "--zexvon-stage",
+    "11"
+  );
+             const navItems =
+    document.querySelectorAll(
+      "[data-nav-item]"
+    );
+
+  const sections =
+    document.querySelectorAll(
+      "section[id]"
+    );
+
+  if (
+    navItems.length &&
+    sections.length
+  ) {
+    const updateActiveNavigation =
+      () => {
+        const scrollPosition =
+          window.scrollY +
+          window.innerHeight *
+            0.32;
+
+        let activeId =
+          "";
+
+        sections.forEach(
+          (section) => {
+            if (
+              section.offsetTop <=
+              scrollPosition
+            ) {
+              activeId =
+                section.id;
+            }
+          }
+        );
+
+        navItems.forEach(
+          (item) => {
+            const target =
+              item.getAttribute(
+                "data-nav-item"
+              );
+
+            const active =
+              target ===
+              activeId;
+
+            item.classList.toggle(
+              "active",
+              active
+            );
+
+            item.setAttribute(
+              "aria-current",
+              active
+                ? "page"
+                : "false"
+            );
+          }
+        );
+      };
+
+    window.addEventListener(
+      "scroll",
+      updateActiveNavigation,
+      {
+        passive: true
+      }
+    );
+
+    window.addEventListener(
+      "resize",
+      updateActiveNavigation,
+      {
+        passive: true
+      }
+    );
+
+    updateActiveNavigation();
+  }
+
+  const sectionCounters =
+    document.querySelectorAll(
+      "[data-section-counter]"
+    );
+
+  sectionCounters.forEach(
+    (counter) => {
+      counter.textContent =
+        String(
+          sections.length
+        ).padStart(
+          2,
+          "0"
+        );
+    }
+  );
+
+  const progressDots =
+    document.querySelectorAll(
+      ".progress-dot"
+    );
+
+  if (
+    progressDots.length &&
+    sections.length
+  ) {
+    progressDots.forEach(
+      (dot) => {
+        dot.addEventListener(
+          "click",
+          () => {
+            const targetId =
+              dot.getAttribute(
+                "data-target"
+              );
+
+            if (
+              !targetId
+            ) {
+              return;
+            }
+
+            const target =
+              document.getElementById(
+                targetId
+              );
+
+            if (
+              target
+            ) {
+              target.scrollIntoView(
+                {
+                  behavior:
+                    "smooth",
+                  block:
+                    "start"
+                }
+              );
+            }
+          }
+        );
+      }
+    );
+  }
+
+  const heroScrollButton =
+    document.querySelector(
+      "[data-scroll-next]"
+    );
+
+  if (
+    heroScrollButton
+  ) {
+    heroScrollButton.addEventListener(
+      "click",
+      () => {
+        const homeSection =
+          document.getElementById(
+            "home"
+          );
+
+        const nextSection =
+          homeSection
+            ? homeSection.nextElementSibling
+            : null;
+
+        if (
+          nextSection
+        ) {
+          nextSection.scrollIntoView(
+            {
+              behavior:
+                "smooth",
+              block:
+                "start"
+            }
+          );
+        }
+      }
+    );
+  }
+
+  const productViewport =
+    document.querySelector(
+      ".products-viewport"
+    );
+
+  const productTrack =
+    document.querySelector(
+      ".products-track"
+    );
+
+  const productItems =
+    productTrack
+      ? productTrack.querySelectorAll(
+          ".product-card"
+        )
+      : [];
+
+  const productPrevious =
+    document.querySelector(
+      "[data-product-previous]"
+    );
+
+  const productNext =
+    document.querySelector(
+      "[data-product-next]"
+    );
+
+  let productIndex =
+    0;
+
+  const getProductStep =
+    () => {
+      if (
+        productItems.length <
+        2
+      ) {
+        return 0;
+      }
+
+      const first =
+        productItems[0];
+
+      const second =
+        productItems[1];
+
+      const firstRect =
+        first.getBoundingClientRect();
+
+      const secondRect =
+        second.getBoundingClientRect();
+
+      return (
+        secondRect.left -
+        firstRect.left
+      );
+    };
+
+  const updateProductControls =
+    () => {
+      if (
+        !productItems.length
+      ) {
+        return;
+      }
+
+      const lastIndex =
+        Math.max(
+          0,
+          productItems.length -
+            1
+        );
+
+      if (
+        productPrevious
+      ) {
+        productPrevious.disabled =
+          productIndex <=
+          0;
+      }
+
+      if (
+        productNext
+      ) {
+        productNext.disabled =
+          productIndex >=
+          lastIndex;
+      }
+
+      productItems.forEach(
+        (
+          product,
+          index
+        ) => {
+          product.classList.toggle(
+            "is-selected",
+            index ===
+              productIndex
+          );
+        }
+      );
+    };
+
+  const scrollToProduct =
+    (index) => {
+      if (
+        !productViewport ||
+        !productItems.length
+      ) {
+        return;
+      }
+
+      const safeIndex =
+        Math.max(
+          0,
+          Math.min(
+            index,
+            productItems.length -
+              1
+          )
+        );
+
+      const target =
+        productItems[
+          safeIndex
+        ];
+
+      if (
+        !target
+      ) {
+        return;
+      }
+
+      productIndex =
+        safeIndex;
+
+      const viewportRect =
+        productViewport.getBoundingClientRect();
+
+      const targetRect =
+        target.getBoundingClientRect();
+
+      const currentScroll =
+        productViewport.scrollLeft;
+
+      const targetOffset =
+        targetRect.left -
+        viewportRect.left;
+
+      productViewport.scrollTo(
+        {
+          left:
+            currentScroll +
+            targetOffset -
+            (viewportRect.width -
+              targetRect.width) /
+              2,
+          behavior:
+            "smooth"
+        }
+      );
+
+      updateProductControls();
+    };
+
+  if (
+    productPrevious
+  ) {
+    productPrevious.addEventListener(
+      "click",
+      () => {
+        scrollToProduct(
+          productIndex -
+            1
+        );
+      }
+    );
+  }
+
+  if (
+    productNext
+  ) {
+    productNext.addEventListener(
+      "click",
+      () => {
+        scrollToProduct(
+          productIndex +
+            1
+        );
+      }
+    );
+  }
+
+  if (
+    productViewport
+  ) {
+    productViewport.addEventListener(
+      "scroll",
+      () => {
+        if (
+          !productItems.length
+        ) {
+          return;
+        }
+
+        const viewportCenter =
+          productViewport.scrollLeft +
+          productViewport.clientWidth /
+            2;
+
+        let closestIndex =
+          0;
+
+        let closestDistance =
+          Infinity;
+
+        productItems.forEach(
+          (
+            item,
+            index
+          ) => {
+            const center =
+              item.offsetLeft +
+              item.offsetWidth /
+                2;
+
+            const distance =
+              Math.abs(
+                center -
+                  viewportCenter
+              );
+
+            if (
+              distance <
+              closestDistance
+            ) {
+              closestDistance =
+                distance;
+
+              closestIndex =
+                index;
+            }
+          }
+        );
+
+        productIndex =
+          closestIndex;
+
+        updateProductControls();
+      },
+      {
+        passive: true
+      }
+    );
+
+    productViewport.addEventListener(
+      "wheel",
+      (event) => {
+        if (
+          Math.abs(
+            event.deltaY
+          ) <=
+          Math.abs(
+            event.deltaX
+          )
+        ) {
+          return;
+        }
+
+        if (
+          productViewport.scrollWidth <=
+          productViewport.clientWidth
+        ) {
+          return;
+        }
+
+        event.preventDefault();
+
+        productViewport.scrollLeft +=
+          event.deltaY;
+      },
+      {
+        passive: false
+      }
+    );
+  }
+
+  updateProductControls();
+
+  const productIndicators =
+    document.querySelectorAll(
+      "[data-product-indicator]"
+    );
+
+  productIndicators.forEach(
+    (indicator) => {
+      indicator.addEventListener(
+        "click",
+        () => {
+          const index =
+            Number(
+              indicator.getAttribute(
+                "data-product-indicator"
+              )
+            );
+
+          if (
+            Number.isFinite(
+              index
+            )
+          ) {
+            scrollToProduct(
+              index
+            );
+          }
+        }
+      );
+    }
+  );
+
+  const productStatus =
+    document.querySelector(
+      "[data-product-status]"
+    );
+
+  if (
+    productStatus
+  ) {
+    const updateProductStatus =
+      () => {
+        const active =
+          productItems[
+            productIndex
+          ];
+
+        if (
+          !active
+        ) {
+          return;
+        }
+
+        const status =
+          active.querySelector(
+            ".product-status"
+          );
+
+        if (
+          status
+        ) {
+          productStatus.textContent =
+            status.textContent.trim();
+        }
+      };
+
+    updateProductStatus();
+
+    if (
+      productViewport
+    ) {
+      productViewport.addEventListener(
+        "scroll",
+        () => {
+          window.requestAnimationFrame(
+            updateProductStatus
+          );
+        },
+        {
+          passive: true
+        }
+      );
+    }
+  }
+
+  const mysteryRevealButtons =
+    document.querySelectorAll(
+      "[data-mystery-reveal]"
+    );
+
+  mysteryRevealButtons.forEach(
+    (button) => {
+      button.addEventListener(
+        "click",
+        () => {
+          const card =
+            button.closest(
+              ".product-card"
+            );
+
+          if (
+            !card
+          ) {
+            return;
+          }
+
+          card.classList.toggle(
+            "mystery-revealed"
+          );
+
+          const revealed =
+            card.classList.contains(
+              "mystery-revealed"
+            );
+
+          button.setAttribute(
+            "aria-expanded",
+            String(
+              revealed
+            )
+          );
+
+          button.textContent =
+            revealed
+              ? "HIDDEN"
+              : "DISCOVER";
+        }
+      );
+    }
+  );
+
+  const comingSoonLabels =
+    document.querySelectorAll(
+      ".coming-soon"
+    );
+
+  comingSoonLabels.forEach(
+    (label) => {
+      label.addEventListener(
+        "pointerenter",
+        () => {
+          label.classList.add(
+            "coming-soon-active"
+          );
+        }
+      );
+
+      label.addEventListener(
+        "pointerleave",
+        () => {
+          label.classList.remove(
+            "coming-soon-active"
+          );
+        }
+      );
+    }
+  );
+
+  const auraRingImages =
+    document.querySelectorAll(
+      "[data-aura-ring]"
+    );
+
+  auraRingImages.forEach(
+    (image) => {
+      image.addEventListener(
+        "pointerenter",
+        () => {
+          image.classList.add(
+            "aura-ring-glow"
+          );
+        }
+      );
+
+      image.addEventListener(
+        "pointerleave",
+        () => {
+          image.classList.remove(
+            "aura-ring-glow"
+          );
+        }
+      );
+    }
+  );
+
+  const heroParticles =
+    document.querySelector(
+      ".hero-particles"
+    );
+
+  if (
+    heroParticles &&
+    !window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches
+  ) {
+    const particleCount =
+      window.innerWidth <
+      700
+        ? 18
+        : 34;
+
+    for (
+      let index = 0;
+      index <
+      particleCount;
+      index += 1
+    ) {
+      const particle =
+        document.createElement(
+          "span"
+        );
+
+      particle.className =
+        "hero-particle";
+
+      particle.style.setProperty(
+        "--particle-index",
+        String(index)
+      );
+
+      particle.style.left =
+        `${Math.random() * 100}%`;
+
+      particle.style.top =
+        `${Math.random() * 100}%`;
+
+      particle.style.setProperty(
+        "--particle-size",
+        `${Math.random() * 2.8 + 1}px`
+      );
+
+      particle.style.setProperty(
+        "--particle-duration",
+        `${Math.random() * 7 + 5}s`
+      );
+
+      particle.style.setProperty(
+        "--particle-delay",
+        `${Math.random() * -8}s`
+      );
+
+      heroParticles.appendChild(
+        particle
+      );
+    }
+  }
+
+  const gridCanvas =
+    document.querySelector(
+      "#grid-canvas"
+    );
+
+  if (
+    gridCanvas &&
+    !window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches
+  ) {
+    const gridContext =
+      gridCanvas.getContext(
+        "2d"
+      );
+
+    let gridWidth =
+      window.innerWidth;
+
+    let gridHeight =
+      window.innerHeight;
+
+    let gridDpr =
+      Math.min(
+        window.devicePixelRatio ||
+          1,
+        2
+      );
+
+    let gridOffset =
+      0;
+
+    const setupGrid =
+      () => {
+        gridWidth =
+          window.innerWidth;
+
+        gridHeight =
+          window.innerHeight;
+
+        gridDpr =
+          Math.min(
+            window.devicePixelRatio ||
+              1,
+            2
+          );
+
+        gridCanvas.width =
+          gridWidth *
+          gridDpr;
+
+        gridCanvas.height =
+          gridHeight *
+          gridDpr;
+
+        gridCanvas.style.width =
+          `${gridWidth}px`;
+
+        gridCanvas.style.height =
+          `${gridHeight}px`;
+
+        gridContext.setTransform(
+          gridDpr,
+          0,
+          0,
+          gridDpr,
+          0,
+          0
+        );
+      };
+
+    const drawGrid =
+      () => {
+        gridContext.clearRect(
+          0,
+          0,
+          gridWidth,
+          gridHeight
+        );
+
+        gridOffset +=
+          0.08;
+
+        const spacing =
+          80;
+
+        gridContext.lineWidth =
+          1;
+
+        gridContext.strokeStyle =
+          "rgba(40, 120, 220, 0.055)";
+
+        for (
+          let x =
+            -spacing +
+            (gridOffset %
+              spacing);
+          x <
+          gridWidth +
+            spacing;
+          x +=
+            spacing
+        ) {
+          gridContext.beginPath();
+
+          gridContext.moveTo(
+            x,
+            0
+          );
+
+          gridContext.lineTo(
+            x,
+            gridHeight
+          );
+
+          gridContext.stroke();
+        }
+
+        for (
+          let y =
+            -spacing +
+            (gridOffset %
+              spacing);
+          y <
+          gridHeight +
+            spacing;
+          y +=
+            spacing
+        ) {
+          gridContext.beginPath();
+
+          gridContext.moveTo(
+            0,
+            y
+          );
+
+          gridContext.lineTo(
+            gridWidth,
+            y
+          );
+
+          gridContext.stroke();
+        }
+
+        requestAnimationFrame(
+          drawGrid
+        );
+      };
+
+    window.addEventListener(
+      "resize",
+      setupGrid,
+      {
+        passive: true
+      }
+    );
+
+    setupGrid();
+
+    requestAnimationFrame(
+      drawGrid
+    );
+  }
+
+  root.style.setProperty(
+    "--zexvon-stage",
+    "12"
+  ); 
