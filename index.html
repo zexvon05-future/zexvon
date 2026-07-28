@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#05070b">
+<meta name="description" content="ZEXVON — Turning Ideas Into Reality.">
+<title>ZEXVON — Turning Ideas Into Reality</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="page-loader" class="page-loader" aria-hidden="true">
+<div class="loader-orbit"></div>
+<span class="loader-text">ZEXVON</span>
+</div>
+<canvas id="ambient-canvas" class="ambient-canvas" aria-hidden="true"></canvas>
+<div class="ambient-overlay" aria-hidden="true"></div>
+<div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+<header class="site-header" id="site-header">
+<a class="brand" href="#home" aria-label="ZEXVON Home">
+<span class="brand-mark" aria-hidden="true">
+<span></span>
+<span></span>
+<span></span>
+</span>
+<span class="brand-name">ZEXVON</span>
+</a>
+<nav class="desktop-nav" aria-label="Primary navigation">
+<a href="#home" class="nav-link is-active">Home</a>
+<a href="#about" class="nav-link">About</a>
+<a href="#products" class="nav-link">Products</a>
+<a href="#vision" class="nav-link">Vision</a>
+<a href="#contact" class="nav-link">Contact</a>
+</nav>
+<button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</header>
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+<div class="mobile-menu-backdrop"></div>
+<div class="mobile-menu-panel">
+<div class="mobile-menu-top">
+<span class="menu-label">ZEXVON</span>
+<button class="menu-close" id="menu-close" type="button" aria-label="Close menu">
+<span></span>
+<span></span>
+</button>
+</div>
+<nav class="mobile-nav" aria-label="Mobile navigation">
+<a href="#home" class="mobile-nav-link">Home<span>01</span></a>
+<a href="#about" class="mobile-nav-link">About<span>02</span></a>
+<a href="#products" class="mobile-nav-link">Products<span>03</span></a>
+<a href="#vision" class="mobile-nav-link">Vision<span>04</span></a>
+<a href="#contact" class="mobile-nav-link">Contact<span>05</span></a>
+</nav>
+<div class="mobile-menu-footer">
+<span>Turning Ideas Into Reality.</span>
+<span>© 2026 ZEXVON</span>
+</div>
+</div>
+</div>
+<main id="main-content">
+<section class="hero section" id="home">
+<div class="hero-grid" aria-hidden="true"></div>
+<div class="hero-orbit hero-orbit-one" aria-hidden="true"></div>
+<div class="hero-orbit hero-orbit-two" aria-hidden="true"></div>
+<div class="hero-content container">
+<div class="hero-eyebrow reveal">FUTURE TECHNOLOGY / 001</div>
+<div class="hero-logo-wrap reveal reveal-delay-1">
+<div class="hero-logo-symbol" aria-hidden="true">
+<span class="logo-ring"></span>
+<span class="logo-core"></span>
+<span class="logo-cut"></span>
+</div>
+<div class="hero-logo-text">ZEXVON</div>
+</div>
+<h1 class="hero-title reveal reveal-delay-2">Turning Ideas Into <span>Reality.</span></h1>
+<p class="hero-description reveal reveal-delay-3">Exploring bold ideas and transforming them into meaningful technology for the future.</p>
+<div class="hero-actions reveal reveal-delay-4">
+<a class="button button-primary glow-target" href="#products">Explore Products</a>
+<a class="button button-secondary glow-target" href="#vision">Our Vision</a>
+</div>
+</div>
+<div class="hero-bottom container reveal reveal-delay-5">
+<div class="hero-status"><span class="status-dot"></span><span>Future systems / Online</span></div>
+<div class="hero-scroll"><span>Scroll to explore</span><span class="scroll-line"></span></div>
+</div>
+</section>
+<section class="about section section-dark" id="about">
+<div class="section-glow section-glow-left" aria-hidden="true"></div>
+<div class="container">
+<div class="section-heading reveal">
+<span class="section-number">02 / ABOUT</span>
+<h2>Ideas Become <span>Reality.</span></h2>
+<p>We explore bold concepts, thoughtful design and future-facing technology built around one simple belief: meaningful innovation begins with imagination.</p>
+</div>
+<div class="about-layout">
+<div class="about-intro reveal">
+<div class="about-line"></div>
+<p class="large-copy">ZEXVON is an independent technology concept brand focused on exploring what could come next.</p>
+</div>
+<div class="about-cards">
+<article class="about-card glow-target reveal reveal-delay-1">
+<div class="card-index">01</div>
+<div class="card-icon" aria-hidden="true">
+<span></span>
+<span></span>
+</div>
+<h3>Imagine</h3>
+<p>We begin with ideas that challenge familiar possibilities and open new directions.</p>
+</article>
+<article class="about-card glow-target reveal reveal-delay-2">
+<div class="card-index">02</div>
+<div class="card-icon card-icon-orbit" aria-hidden="true">
+<span></span>
+<span></span>
+</div>
+<h3>Design</h3>
+<p>We shape ambitious concepts through clean, purposeful and human-focused design.</p>
+</article>
+<article class="about-card glow-target reveal reveal-delay-3">
+<div class="card-index">03</div>
+<div class="card-icon card-icon-core" aria-hidden="true">
+<span></span>
+<span></span>
+</div>
+<h3>Create</h3>
+<p>We turn promising ideas into experiences that feel useful, intelligent and futuristic.</p>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="products section" id="products">
+<div class="section-glow section-glow-right" aria-hidden="true"></div>
+<div class="container">
+<div class="section-heading products-heading reveal">
+<span class="section-number">03 / PRODUCTS</span>
+<h2>Something is <span>coming.</span></h2>
+<p>Two concepts. Two different directions. One future still waiting to be revealed.</p>
+</div>
+<div class="product-carousel-wrap reveal reveal-delay-1">
+<div class="product-carousel" id="product-carousel" tabindex="0" aria-label="ZEXVON products">
+<article class="product-card product-aura glow-target" data-product="aura">
+<div class="product-visual">
+<div class="aura-environment" aria-hidden="true"></div>
+<div class="aura-ring-model" aria-hidden="true">
+<div class="ring-outer"></div>
+<div class="ring-inner"></div>
+<div class="ring-highlight"></div>
+<div class="ring-shadow"></div>
+</div>
+<div class="product-scanline" aria-hidden="true"></div>
+<span class="product-orbit-dot product-orbit-dot-one" aria-hidden="true"></span>
+<span class="product-orbit-dot product-orbit-dot-two" aria-hidden="true"></span>
+</div>
+<div class="product-info">
+<div class="product-topline">
+<span class="product-category">ZEXVON / 01</span>
+<span class="product-state">COMING SOON</span>
+</div>
+<h3>Aura Ring</h3>
+<p>Something new is coming.</p>
+<a href="#contact" class="product-link glow-target">Stay Connected <span>↗</span></a>
+</div>
+</article>
+<article class="product-card product-mystery glow-target" data-product="mystery">
+<div class="product-visual mystery-visual">
+<div class="mystery-grid" aria-hidden="true"></div>
+<div class="mystery-core" aria-hidden="true">
+<div class="mystery-core-ring"></div>
+<div class="mystery-core-light"></div>
+<div class="mystery-core-center"></div>
+</div>
+<div class="mystery-bars" aria-hidden="true">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="mystery-classified">CLASSIFIED</div>
+</div>
+<div class="product-info">
+<div class="product-topline">
+<span class="product-category">ZEXVON / 02</span>
+<span class="product-state product-state-secret">UNKNOWN</span>
+</div>
+<h3>Project X</h3>
+<p>Not everything needs to be revealed yet.</p>
+<a href="#vision" class="product-link glow-target">Discover The Future <span>↗</span></a>
+</div>
+</article>
+</div>
+<div class="carousel-controls reveal reveal-delay-2">
+<button class="carousel-button glow-target" id="product-prev" type="button" aria-label="Previous product">←</button>
+<div class="carousel-progress">
+<span class="carousel-progress-current" id="carousel-current">01</span>
+<span class="carousel-progress-line"><span id="carousel-progress-fill"></span></span>
+<span class="carousel-progress-total">02</span>
+</div>
+<button class="carousel-button glow-target" id="product-next" type="button" aria-label="Next product">→</button>
+</div>
+</div>
+</div>
+</section>
+<section class="vision section section-dark" id="vision">
+<div class="vision-stars" aria-hidden="true"></div>
+<div class="container">
+<div class="vision-content">
+<span class="section-number reveal">04 / VISION</span>
+<div class="vision-symbol reveal reveal-delay-1" aria-hidden="true">
+<div class="vision-symbol-ring"></div>
+<div class="vision-symbol-core"></div>
+<div class="vision-symbol-line vision-symbol-line-one"></div>
+<div class="vision-symbol-line vision-symbol-line-two"></div>
+</div>
+<h2 class="reveal reveal-delay-2">Imagine What<br><span>Comes Next.</span></h2>
+<p class="vision-copy reveal reveal-delay-3">Every great future begins with one bold idea. ZEXVON turns bold ideas into reality.</p>
+<div class="vision-quote reveal reveal-delay-4">
+<span class="quote-mark">“</span>
+<p>The future isn't somewhere we arrive. It's something we create.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="contact section" id="contact">
+<div class="contact-glow" aria-hidden="true"></div>
+<div class="container">
+<div class="contact-layout">
+<div class="contact-heading reveal">
+<span class="section-number">05 / CONTACT</span>
+<h2>Let's Build<br><span>The Future.</span></h2>
+</div>
+<div class="contact-content reveal reveal-delay-1">
+<p>Have an idea, collaboration or opportunity? Let's create what comes next.</p>
+<div class="contact-links">
+<a href="mailto:hello@zexvon.com" class="contact-link glow-target">
+<span class="contact-link-label">Email</span>
+<span class="contact-link-arrow">↗</span>
+</a>
+<a href="#" class="contact-link glow-target">
+<span class="contact-link-label">Instagram</span>
+<span class="contact-link-arrow">↗</span>
+</a>
+<a href="#" class="contact-link glow-target">
+<span class="contact-link-label">LinkedIn</span>
+<span class="contact-link-arrow">↗</span>
+</a>
+<a href="#" class="contact-link glow-target">
+<span class="contact-link-label">X / Twitter</span>
+<span class="contact-link-arrow">↗</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="footer-main">
+<a href="#home" class="footer-brand glow-target" aria-label="Back to ZEXVON home">
+<span class="footer-symbol" aria-hidden="true">
+<span></span>
+<span></span>
+<span></span>
+</span>
+<span>ZEXVON</span>
+</a>
+<p>Turning Ideas Into Reality.</p>
+</div>
+<div class="footer-bottom">
+<span>© 2026 ZEXVON. All Rights Reserved.</span>
+<div class="footer-links">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#products">Products</a>
+<a href="#vision">Vision</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</div>
+</footer>
+<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+<button class="back-to-top glow-target" id="back-to-top" type="button" aria-label="Back to top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg: #030508;
+  --bg-soft: #070a10;
+  --bg-card: rgba(10, 15, 24, 0.62);
+  --blue: #1683ff;
+  --blue-soft: #4ba4ff;
+  --blue-bright: #79bdff;
+  --white: #f5f8fc;
+  --silver: #b8c1cd;
+  --muted: #747e8d;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-blue: rgba(22, 131, 255, 0.28);
+  --glass: rgba(255, 255, 255, 0.035);
+  --shadow: 0 30px 100px rgba(0, 0, 0, 0.55);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.16, 1, 0.3, 1);
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 50% -20%, rgba(22, 131, 255, 0.08), transparent 34%),
+    var(--bg);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+body::selection {
+  background: rgba(22, 131, 255, 0.35);
+  color: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  border: 0;
+  font: inherit;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+canvas {
+  display: block;
+}
+
+.container {
+  width: min(1240px, calc(100% - 80px));
+  margin-inline: auto;
+  position: relative;
+  z-index: 4;
+}
+
+.section {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.section-dark {
+  background:
+    radial-gradient(circle at 20% 50%, rgba(22, 131, 255, 0.035), transparent 34%),
+    rgba(2, 4, 8, 0.72);
+}
+
+.ambient-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.ambient-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -9;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 45%, transparent 0%, rgba(3, 5, 8, 0.08) 42%, rgba(3, 5, 8, 0.74) 100%),
+    linear-gradient(180deg, rgba(3, 5, 8, 0.08), rgba(3, 5, 8, 0.28));
+}
+
+.cursor-glow {
+  position: fixed;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 20;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(22, 131, 255, 0.075), transparent 68%);
+  transition: opacity 0.4s ease;
+  mix-blend-mode: screen;
+}
+
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+  background: #020407
+  
