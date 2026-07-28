@@ -163,8 +163,24 @@ border-radius:50%;background:radial-gradient(circle,#168cff20,transparent 68%);
 .product h3{font:500 45px "Space Grotesk";margin-top:13px}
 .product p{max-width:390px;color:var(--muted);line-height:1.8;font-size:13px;margin-top:10px}
 .badge{
-display:inline-block;margin-top:19px;padding:7px 12px;border-radius:50px;
-border:1px solid #168cff55;color:var(--cyan);font-size:9px;letter-spacing:.15em;
+display:inline-block;
+margin-top:19px;
+padding:8px 14px;
+border-radius:50px;
+border:1px solid #168cff88;
+color:#9bddff;
+background:#168cff0d;
+font-size:9px;
+font-weight:600;
+letter-spacing:.18em;
+box-shadow:0 0 18px #168cff18,inset 0 0 12px #168cff0d;
+transition:.35s ease;
+}
+
+.product:hover .badge{
+border-color:#168cff;
+color:#ffffff;
+box-shadow:0 0 25px #168cff55,inset 0 0 18px #168cff18;
 }
 .ring-image{
 position:absolute;
