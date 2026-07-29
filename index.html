@@ -334,6 +334,118 @@ color:white;border-radius:50%;
   letter-spacing:6px;
   margin-bottom:30px;
   }
+  /* ZEXVON 3D OPENING */
+.zexvon-opening{
+  position:fixed;
+  inset:0;
+  z-index:99999;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#000;
+  perspective:1200px;
+  animation:zexvonOpeningOut 1.2s ease 5.5s forwards;
+}
+
+.zexvon-opening-space{
+  position:absolute;
+  inset:-15%;
+  background:
+    radial-gradient(circle at 50% 50%,rgba(0,90,255,.16),transparent 35%),
+    radial-gradient(circle at 25% 35%,rgba(0,70,180,.08),transparent 30%),
+    #000;
+  animation:zexvonSpaceMove 7s ease-in-out infinite alternate;
+}
+
+.zexvon-opening-particles{
+  position:absolute;
+  inset:-20%;
+  opacity:.28;
+  background-image:
+    radial-gradient(circle,rgba(255,255,255,.75) 1px,transparent 1.5px);
+  background-size:95px 95px;
+  animation:zexvonParticles 12s linear infinite;
+}
+
+.zexvon-opening-glow{
+  position:absolute;
+  width:45vw;
+  height:45vw;
+  border-radius:50%;
+  background:rgba(0,100,255,.08);
+  filter:blur(90px);
+  animation:zexvonGlow 3.5s ease-in-out infinite;
+}
+
+.zexvon-opening-logo{
+  position:relative;
+  z-index:5;
+  width:min(78vw,650px);
+  transform-style:preserve-3d;
+  animation:zexvonLogoReveal 2.4s cubic-bezier(.16,.8,.2,1) forwards;
+}
+
+.zexvon-opening-logo img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+
+@keyframes zexvonLogoReveal{
+  0%{
+    opacity:0;
+    transform:translateZ(-600px) scale(.55);
+    filter:blur(16px);
+  }
+  65%{
+    opacity:1;
+    transform:translateZ(100px) scale(1.03);
+    filter:blur(0);
+  }
+  100%{
+    opacity:1;
+    transform:translateZ(0) scale(1);
+  }
+}
+
+@keyframes zexvonSpaceMove{
+  from{
+    transform:scale(1) translate3d(0,0,0);
+  }
+  to{
+    transform:scale(1.12) translate3d(-2%,1%,70px);
+  }
+}
+
+@keyframes zexvonParticles{
+  from{
+    transform:translate3d(0,0,0) scale(1);
+  }
+  to{
+    transform:translate3d(-55px,30px,0) scale(1.12);
+  }
+}
+
+@keyframes zexvonGlow{
+  0%,100%{
+    transform:scale(.9);
+    opacity:.4;
+  }
+  50%{
+    transform:scale(1.12);
+    opacity:.8;
+  }
+}
+
+@keyframes zexvonOpeningOut{
+  to{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+  }
+}
 </style>
 </head>
 
