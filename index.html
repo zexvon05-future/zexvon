@@ -446,6 +446,31 @@ color:white;border-radius:50%;
     pointer-events:none;
   }
 }
+  .hero-animation{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:25px 0 35px 0;
+}
+
+.opening-logo{
+    width:min(90vw,700px);
+    animation:floatLogo 6s ease-in-out infinite;
+    filter:drop-shadow(0 0 30px #168cff);
+}
+
+@keyframes floatLogo{
+    0%{
+        transform:translateY(0px) scale(1);
+    }
+    50%{
+        transform:translateY(-15px) scale(1.03);
+    }
+    100%{
+        transform:translateY(0px) scale(1);
+    }
+}
 </style>
   <link rel="stylesheet" href="intro.css">
 </head>
