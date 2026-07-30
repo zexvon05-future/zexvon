@@ -12,7 +12,7 @@ intro.innerHTML = `
 
 <div class="logo-wrap">
 
-<img src="logo.png" alt="ZEXVON Logo">
+<img src="opening.png" alt="ZEXVON Opening" style="width:100vw;height:100vh;object-fit:cover;">
 
 <div class="logo-title">ZEXVON</div>
 
