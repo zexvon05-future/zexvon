@@ -501,64 +501,7 @@ color:white;border-radius:50%;
   <script type="module">
 import * as THREE from "https://unpkg.com/three@0.160.0/build/three.module.js";
 
-const container = document.getElementById("hero3d");
-if(container){
 
-const scene = new THREE.Scene();
-
-const camera = new THREE.PerspectiveCamera(
-45,
-window.innerWidth/window.innerHeight,
-0.1,
-1000
-);
-
-camera.position.z = 4;
-
-const renderer = new THREE.WebGLRenderer({
-alpha:true,
-antialias:true
-});
-
-renderer.setSize(window.innerWidth,window.innerHeight);
-renderer.setPixelRatio(window.devicePixelRatio);
-
-container.appendChild(renderer.domElement);
-
-const geometry = new THREE.TorusKnotGeometry(1,0.3,180,32);
-
-const material = new THREE.MeshPhysicalMaterial({
-color:0x3aa6ff,
-metalness:1,
-roughness:0.1,
-transmission:0.15,
-clearcoat:1,
-emissive:0x0a4cff,
-emissiveIntensity:1
-});
-
-const mesh = new THREE.Mesh(geometry,material);
-scene.add(mesh);
-
-const light1 = new THREE.PointLight(0x4da3ff,25);
-light1.position.set(5,5,5);
-
-const light2 = new THREE.PointLight(0xffffff,15);
-light2.position.set(-5,-5,5);
-
-scene.add(light1);
-scene.add(light2);
-
-function animate(){
-requestAnimationFrame(animate);
-
-mesh.rotation.x += 0.003;
-mesh.rotation.y += 0.005;
-
-renderer.render(scene,camera);
-}
-
-animate();
 
 window.addEventListener("resize",()=>{
 camera.aspect=window.innerWidth/window.innerHeight;
