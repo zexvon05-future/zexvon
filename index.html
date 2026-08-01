@@ -498,19 +498,7 @@ color:white;border-radius:50%;
   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.0/build/spline-viewer.js"></script>
 </head>
   <script src="intro.js"></script>
-  <script type="module">
-import * as THREE from "https://unpkg.com/three@0.160.0/build/three.module.js";
-
-
-
-window.addEventListener("resize",()=>{
-camera.aspect=window.innerWidth/window.innerHeight;
-camera.updateProjectionMatrix();
-renderer.setSize(window.innerWidth,window.innerHeight);
-});
-
-}
-</script>
+  
 <body>
 
 <canvas id="stars"></canvas>
