@@ -5,7 +5,17 @@
     overflow:hidden;
     background:#000;
 }
+.hero-content{
+    position:absolute;
+    bottom:60px;
+    left:0;
+    width:100%;
+    z-index:20;
+}
 
+.hero-data{
+    display:none;
+}
 #hero3{
     position:absolute;
     inset:0;
